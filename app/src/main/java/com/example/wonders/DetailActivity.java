@@ -19,7 +19,7 @@ public class DetailActivity extends AppCompatActivity {
         int message = intent.getIntExtra("position", 0);
 
         //populate detail activity here based on info from the Wonders class
-        //can put youtube links or wiki links here as well
+        //can put youtube links or wiki links here as well or whatever
 
 
 
