@@ -18,17 +18,13 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
     private MainActivity mParentActivity;
     private ArrayList<Wonder> mWonders;
 
-    private View.OnClickListener mOnClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-                Context context = v.getContext();
-                Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra(DetailFragment.ARG_ITEM_ID, Wonders.getName());
-                context.startActivity(intent);
-            }
-    };
+    public interface OnClickListener {
+        void onClick(View view, int position);
 
-    public WondersAdapter(MainActivity parent, ArrayList<Wonders> wonders) {
+    }
+
+
+    public WondersAdapter(MainActivity parent, ArrayList<Wonder> wonders) {
         mParentActivity = parent;
         mWonders = wonders;
     }
@@ -43,6 +39,16 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
             year = v.findViewById(R.id.year);
             location = v.findViewById(R.id.location);
             image = v.findViewById(R.id.image);
+        }
+
+        @Override
+        public void onClick(View v) {
+
+            int position = getLayoutPosition();
+            Intent intent = new Intent(v.getContext(), DetailActivity.class);
+            intent.putExtra("position", position);
+            v.getContext().startActivity(intent);
+
         }
     }
 

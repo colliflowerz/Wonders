@@ -1,8 +1,9 @@
 package com.example.wonders;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,12 +12,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        //Collin was here
-
-
-        //comitting comments from Iris
-        //Another comment iris
-
     }
+        RecyclerView mRecyclerView = findViewById(R.id.rvList);
+        mRecyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        RecyclerView.Adapter mAdapter = new WondersAdapter(this, Wonder.getCoins());
+        mRecyclerView.setAdapter(mAdapter);
+
 }
