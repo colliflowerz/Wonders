@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class DetailActivity extends AppCompatActivity {
     public static final String ARG_ITEM_ID = "item_id";
     private ArrayList<Wonder> wonders;

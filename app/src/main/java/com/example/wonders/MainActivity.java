@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        RecyclerView.Adapter mAdapter = new WondersAdapter(this, Wonder.getCoins());
+        RecyclerView.Adapter mAdapter = new WondersAdapter(this, Wonder.getWonders());
         mRecyclerView.setAdapter(mAdapter);
 
 }
