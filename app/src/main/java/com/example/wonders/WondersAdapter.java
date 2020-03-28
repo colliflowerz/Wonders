@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 
-public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersViewHolder>{
+public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersViewHolder> {
     private MainActivity mParentActivity;
     private ArrayList<Wonder> mWonders;
 
@@ -29,7 +29,7 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
         mWonders = wonders;
     }
 
-    public static class WondersViewHolder extends RecyclerView.ViewHolder  {
+    public static class WondersViewHolder extends RecyclerView.ViewHolder {
         public TextView name, year, location;
         public ImageView image;
 
@@ -41,7 +41,6 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
             image = v.findViewById(R.id.image);
         }
 
-        @Override
         public void onClick(View v) {
 
             int position = getLayoutPosition();
@@ -66,7 +65,6 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
         holder.year.setText(String.valueOf(wonder.getYear()));
         holder.location.setText(wonder.getLocation());
         holder.itemView.setTag(wonder);
-        holder.itemView.setOnClickListener(mOnClickListener);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -79,4 +77,4 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
 
 
 
-}
+

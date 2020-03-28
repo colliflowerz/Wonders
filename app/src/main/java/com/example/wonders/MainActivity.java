@@ -11,14 +11,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-    }
         RecyclerView mRecyclerView = findViewById(R.id.rvList);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
         RecyclerView.Adapter mAdapter = new WondersAdapter(this, Wonder.getWonders());
         mRecyclerView.setAdapter(mAdapter);
+
+
+    }
 
 }
