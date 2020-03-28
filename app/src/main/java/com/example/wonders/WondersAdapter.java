@@ -15,26 +15,30 @@ import java.util.ArrayList;
 
 
 public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersViewHolder> {
-    private MainActivity mParentActivity;
     private ArrayList<Wonder> mWonders;
+    private RecyclerViewClickListener mListener;
 
-    public interface OnClickListener {
+    WondersAdapter(ArrayList<Wonder> wonders, RecyclerViewClickListener listener) {
+        mWonders = wonders;
+        mListener = listener;
+    }
+
+    public interface RecyclerViewClickListener {
         void onClick(View view, int position);
 
     }
 
 
-    public WondersAdapter(MainActivity parent, ArrayList<Wonder> wonders) {
-        mParentActivity = parent;
-        mWonders = wonders;
-    }
+    public static class WondersViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        private TextView name, year, location;
+        private ImageView image;
+        private RecyclerViewClickListener mListener;
 
-    public static class WondersViewHolder extends RecyclerView.ViewHolder {
-        public TextView name, year, location;
-        public ImageView image;
 
-        public WondersViewHolder(View v) {
+        private WondersViewHolder(View v, RecyclerViewClickListener listener) {
             super(v);
+            mListener = listener;
+            v.setOnClickListener(this);
             name = v.findViewById(R.id.name);
             year = v.findViewById(R.id.year);
             location = v.findViewById(R.id.location);
@@ -42,19 +46,14 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
         }
 
         public void onClick(View v) {
-
-            int position = getLayoutPosition();
-            Intent intent = new Intent(v.getContext(), DetailActivity.class);
-            intent.putExtra("position", position);
-            v.getContext().startActivity(intent);
-
+            mListener.onClick(v, getAdapterPosition());
         }
     }
 
     @Override
     public WondersAdapter.WondersViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.wonders_list_row, parent, false);
-        return new WondersViewHolder(v);
+        return new WondersViewHolder(v, mListener);
     }
 
     // Replace the contents of a view (invoked by the layout manager)
