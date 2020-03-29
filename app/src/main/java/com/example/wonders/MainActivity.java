@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String EXTRA_MESSAGE = "hello there";
+    public static final String EXTRA_MESSAGE = "hello there";
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;

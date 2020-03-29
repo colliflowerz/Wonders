@@ -64,6 +64,7 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
         holder.year.setText(String.valueOf(wonder.getYear()));
         holder.location.setText(wonder.getLocation());
         holder.itemView.setTag(wonder);
+        holder.image.setImageResource(wonder.getImage());
     }
 
     // Return the size of your dataset (invoked by the layout manager)

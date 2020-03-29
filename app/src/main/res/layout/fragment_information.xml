@@ -13,7 +13,7 @@
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">>
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +26,7 @@
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
                 android:padding="5dp"
-                android:scaleType="centerInside" />
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:id="@+id/wonder_name"
@@ -41,7 +41,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/wonder_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -52,9 +52,9 @@
         android:paddingEnd="20dp"
         android:paddingRight="20dp"
         android:paddingBottom="20dp"
-        android:text="Description"
+        android:text="Loading..."
         android:textColor="#BF000000"
         android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@id/wonder_cardview"/>
+        app:layout_constraintTop_toBottomOf="@id/wonder_cardview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
