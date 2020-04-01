@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MainActivity extends AppCompatActivity {
 
     private CardView explore;
+    private CardView funfacts;
 
 
 
@@ -20,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        explore = findViewById(R.id.Card1);
+        //explore button
 
+        explore = findViewById(R.id.Card1);
         explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +34,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }) ;
+
+        //fun facts button
+        funfacts = findViewById(R.id.Card2);
+        funfacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(MainActivity.this, FunFacts.class);
+                startActivity(intent2);
+            }
+        });
 
 
 
