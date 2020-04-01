@@ -24,12 +24,12 @@ public class DetailActivity extends AppCompatActivity {
         int message = intent.getIntExtra("position", 0);
 
 
-        int position = intent.getIntExtra(MainActivity.EXTRA_MESSAGE, 0);
+        int position = intent.getIntExtra(ListOfWonders.EXTRA_MESSAGE, 0);
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         Fragment fragment = new InformationFragment();
         Bundle args = new Bundle();
-        args.putInt(MainActivity.EXTRA_MESSAGE, position);
+        args.putInt(ListOfWonders.EXTRA_MESSAGE, position);
         fragment.setArguments(args);
         transaction.replace(R.id.scrollView, fragment);
         transaction.commit();
