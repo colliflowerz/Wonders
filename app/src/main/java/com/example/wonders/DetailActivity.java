@@ -33,8 +33,6 @@ public class DetailActivity extends AppCompatActivity {
         fragment.setArguments(args);
         transaction.replace(R.id.scrollView, fragment);
         transaction.commit();
-        //populate detail activity here based on info from the Wonders class
-        //can put youtube links or wiki links here as well or whatever
 
 
 

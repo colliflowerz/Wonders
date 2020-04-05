@@ -18,6 +18,8 @@ public class FunFacts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fun_facts);
 
+        setTitle("Fun Facts");
+
         //retrieving UI element IDs
         final TextView factText = (TextView) findViewById(R.id.factTextView);
         final Button factButton = (Button) findViewById(R.id.showFactButton);

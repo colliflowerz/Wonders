@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private CardView explore;
     private CardView funfacts;
+    private CardView discover;
 
 
 
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setTitle("New Seven Wonders of the World");
 
         //explore button
 
@@ -45,8 +48,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //discover button
+        discover = findViewById(R.id.discover);
+        discover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent3 = new Intent(MainActivity.this, DiscoverList.class);
 
+                startActivity(intent3);
+
+            }
+        }) ;
 
 
 
