@@ -53,7 +53,6 @@ public class InformationFragment extends Fragment {
 
         Intent intent = getActivity().getIntent();
         int position = intent.getIntExtra(ListOfWonders.EXTRA_MESSAGE, 0);
-
         wonder = Wonder.getWonders().get(position);
 
         title.setText(wonder.getName());
