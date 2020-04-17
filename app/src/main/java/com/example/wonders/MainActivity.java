@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView explore;
     private CardView funfacts;
     private CardView discover;
+    private CardView quiz;
 
 
 
@@ -60,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }) ;
+
+        quiz = findViewById(R.id.quiz);
+        quiz.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(MainActivity.this, QuizActivity.class);
+
+                startActivity(intent4);
+            }
+        }));
 
 
 
