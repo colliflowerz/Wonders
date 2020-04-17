@@ -5,39 +5,71 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "hello there";
+    private CardView explore;
+    private CardView funfacts;
+    private CardView discover;
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mRecyclerView = findViewById(R.id.rvList);
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        WondersAdapter.RecyclerViewClickListener listener = new WondersAdapter.RecyclerViewClickListener() {
+
+        setTitle("New Seven Wonders of the World");
+
+        //explore button
+
+        explore = findViewById(R.id.Card1);
+        explore.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view, int position) {
-                launchDetailActivity(position);
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, ListOfWonders.class);
+
+                startActivity(intent);
+
             }
-        };
-        mAdapter = new WondersAdapter(Wonder.getWonders(), listener);
-        mRecyclerView.setAdapter(mAdapter);
+        }) ;
+
+        //fun facts button
+        funfacts = findViewById(R.id.Card2);
+        funfacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(MainActivity.this, FunFacts.class);
+                startActivity(intent2);
+            }
+        });
+
+        //discover button
+        discover = findViewById(R.id.discover);
+        discover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent3 = new Intent(MainActivity.this, DiscoverList.class);
+
+                startActivity(intent3);
+
+            }
+        }) ;
+
+
+
 
     }
 
-    private void launchDetailActivity(int position) {
-        Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, position);
+    private void LaunchListOfWonders(){
+        Intent intent = new Intent(this, ListOfWonders.class);
         startActivity(intent);
     }
+
+
 }

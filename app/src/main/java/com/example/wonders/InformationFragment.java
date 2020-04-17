@@ -52,7 +52,7 @@ public class InformationFragment extends Fragment {
         description = view.findViewById(R.id.wonder_description);
 
         Intent intent = getActivity().getIntent();
-        int position = intent.getIntExtra(MainActivity.EXTRA_MESSAGE, 0);
+        int position = intent.getIntExtra(ListOfWonders.EXTRA_MESSAGE, 0);
 
         wonder = Wonder.getWonders().get(position);
 

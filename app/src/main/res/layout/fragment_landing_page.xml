@@ -11,14 +11,14 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        
         <RelativeLayout
             android:layout_marginTop="32dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
+            
             <TextView
                 android:id="@+id/textLanding"
                 android:text="My Launchpad"
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content" />
 
 
-
+            
             <ImageView
                 android:layout_alignParentRight="true"
                 android:src="@drawable/world"
@@ -56,37 +56,37 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/Card1"
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
                 app:cardBackgroundColor="#3c4047"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-
-                app:cardElevation="6dp">
-
+                android:layout_margin="12dp"
+                
+                >
+                
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
-
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    
                     <ImageView
+                        android:src="@drawable/world"
                         android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/world" />
-
+                        android:layout_height="80dp"/>
+                    
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
+                        android:textSize="25sp"
+                        android:textColor="#FFFFFF"
                         android:text="Explore"
-                        android:textColor="#FFFFFF"
-                        android:textSize="25sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
 
                 </LinearLayout>
@@ -95,37 +95,37 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/Card2"
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
                 app:cardBackgroundColor="#3c4047"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
 
-                app:cardElevation="6dp">
+                >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <ImageView
+                        android:src="@drawable/confetti"
                         android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/confetti" />
+                        android:layout_height="80dp"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
+                        android:textSize="25sp"
+                        android:textColor="#FFFFFF"
                         android:text="Fun Facts"
-                        android:textColor="#FFFFFF"
-                        android:textSize="25sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
 
                 </LinearLayout>
@@ -134,37 +134,37 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/discover"
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
                 app:cardBackgroundColor="#3c4047"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
 
-                app:cardElevation="6dp">
+                >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <ImageView
+                        android:src="@drawable/telescope"
                         android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/telescope" />
+                        android:layout_height="80dp"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Discover"
+                        android:textSize="25sp"
                         android:textColor="#FFFFFF"
-                        android:textSize="25sp" />
+                        android:text="Discover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
 
                 </LinearLayout>
@@ -252,7 +252,7 @@
 
 
         </GridLayout>
-
+        
     </LinearLayout>
 
     <!-- TODO: Update blank fragment layout -->
