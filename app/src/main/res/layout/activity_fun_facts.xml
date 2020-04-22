@@ -4,7 +4,8 @@
     android:id="@+id/relativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FunFacts">
+    tools:context=".FunFacts"
+    android:background="#2c2e33">
 
     <TextView
         android:layout_width="232dp"
@@ -32,7 +33,8 @@
         android:layout_marginTop="224dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="219dp"
-        android:background="#009688">
+        android:background="@drawable/bg_light_grey"
+        >
 
         <TextView
             android:id="@+id/factTextView"
@@ -59,7 +61,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="40dp"
-        android:background="#FF8F00"
+        android:background="@drawable/bg_btn_colour"
         android:text="@string/next_fun_fact" />
 
 </RelativeLayout>
