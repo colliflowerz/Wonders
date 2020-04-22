@@ -3,11 +3,12 @@ package com.example.wonders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.wonders.quizFiles.QuizActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView funfacts;
     private CardView discover;
     private CardView quiz;
+    private ScrollView bg1;
 
 
 
@@ -24,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setTitle("New Seven Wonders of the World");
+
+        //set bg
+        bg1=findViewById(R.id.bg1);
+
 
         //explore button
 

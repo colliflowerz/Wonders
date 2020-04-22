@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.quizFiles;
 
 public class Questions {
 

@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.quizFiles;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,14 +10,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.wonders.R;
+
 import java.util.Random;
 
-public class QuizActivity extends AppCompatActivity {
+public class ChristQuizActivity extends AppCompatActivity {
 
     Button answer1, answer2, answer3, answer4;
     TextView score, question;
 
-    private Questions mQuestions = new Questions();
+    private ChristQuestions mQuestions = new ChristQuestions();
 
     private String mAnswer;
     private int mScore = 0;
@@ -116,8 +118,10 @@ public class QuizActivity extends AppCompatActivity {
         mAnswer = mQuestions.getCorrectAnswer(num);
     }
 
+    //Method if user gets question wrong
+
     private void gameOver () {
-        AlertDialog.Builder alertDialogueBuilder = new AlertDialog.Builder(QuizActivity.this);
+        final AlertDialog.Builder alertDialogueBuilder = new AlertDialog.Builder(ChristQuizActivity.this);
         alertDialogueBuilder
                 .setMessage("Game Over! Your Score is " + mScore + " points.")
                 .setCancelable(false)
@@ -135,9 +139,14 @@ public class QuizActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int i) {
 
+
+
                                 finish();
 
+
                             }
-                        });
+
+
+                        }).show();
     }
 }
