@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#2c2e33">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/wonder_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="14dp"
         app:cardElevation="3dp"
+        app:cardBackgroundColor="#3c4047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -35,7 +37,7 @@
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="Name of Wonder"
-                android:textColor="#000000"
+                android:textColor="#dedede"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -53,7 +55,7 @@
         android:paddingRight="20dp"
         android:paddingBottom="20dp"
         android:text="Loading..."
-        android:textColor="#BF000000"
+        android:textColor="#dedede"
         android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@id/wonder_cardview" />
 

@@ -12,7 +12,7 @@
     android:paddingTop="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:background="#dedede"
+    android:background="#27292D"
     tools:context=".quizFiles.QuizActivity">
 
     <Button
@@ -22,8 +22,8 @@
         android:layout_above="@id/answer4"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_btn"
-        android:textColor="#dedede"
+        android:background="@drawable/bg_btn_colour"
+        android:textColor="#27292d"
 
         android:text="Button" />
 
@@ -34,8 +34,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="37dp"
-        android:background="@drawable/bg_btn"
-        android:textColor="#dedede"
+        android:background="@drawable/bg_btn_colour"
+        android:textColor="#27292d"
         android:text="Button" />
 
     <Button
@@ -44,8 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/answer3"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_btn"
-        android:textColor="#dedede"
+        android:background="@drawable/bg_btn_colour"
+        android:textColor="#27292d"
         android:text="Button" />
 
     <TextView
@@ -56,7 +56,7 @@
         android:textSize="24dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-
+        android:textColor="#dedede"
         android:text="TextView" />
 
     <TextView
@@ -68,6 +68,7 @@
         android:layout_below="@id/score"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/answer1"
+        android:textColor="#dedede"
         android:text="TextView" />
 
     <Button
@@ -77,8 +78,8 @@
         android:layout_above="@id/answer2"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_btn"
-        android:textColor="#dedede"
+        android:background="@drawable/bg_btn_colour"
+        android:textColor="#27292d"
         android:text="Button" />
 
 </RelativeLayout>
