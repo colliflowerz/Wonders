@@ -30,7 +30,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        r= new Random();
+        r = new Random();
 
         answer1 = (Button) findViewById(R.id.answer1);
         answer2 = (Button) findViewById(R.id.answer2);
@@ -49,7 +49,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (answer1.getText() == mAnswer) {
-                    mScore ++;
+                    mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestion(r.nextInt(mQuestionsLength));
                 } else {
@@ -64,7 +64,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (answer2.getText() == mAnswer) {
-                    mScore ++;
+                    mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestion(r.nextInt(mQuestionsLength));
                 } else {
@@ -79,7 +79,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (answer3.getText() == mAnswer) {
-                    mScore ++;
+                    mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestion(r.nextInt(mQuestionsLength));
                 } else {
@@ -94,7 +94,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (answer4.getText() == mAnswer) {
-                    mScore ++;
+                    mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestion(r.nextInt(mQuestionsLength));
                 } else {
@@ -106,7 +106,7 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void updateQuestion (int num) {
+    private void updateQuestion(int num) {
         question.setText(mQuestions.getQuestion(num));
         answer1.setText(mQuestions.getChoice1(num));
         answer2.setText(mQuestions.getChoice2(num));
@@ -116,7 +116,7 @@ public class QuizActivity extends AppCompatActivity {
         mAnswer = mQuestions.getCorrectAnswer(num);
     }
 
-    private void gameOver () {
+    private void gameOver() {
         AlertDialog.Builder alertDialogueBuilder = new AlertDialog.Builder(QuizActivity.this);
         alertDialogueBuilder
                 .setMessage("Game Over! Your Score is " + mScore + " points.")
