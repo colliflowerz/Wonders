@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.wonders.MainActivity;
 import com.example.wonders.R;
 
 import java.util.Random;
@@ -139,7 +140,9 @@ public class QuizActivity extends AppCompatActivity {
 
 
 
-                                finish();
+                              //  finish();
+
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
 
                             }
