@@ -12,12 +12,12 @@
         android:id="@+id/globe"
         android:layout_width="433dp"
         android:layout_height="237dp"
-        android:src="@drawable/globegif1"
+        android:src="@drawable/transparentplanegif2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteX="-8dp"
-        tools:src="@drawable/globegif1" />
+        tools:src="@drawable/transparentplanegif2" />
 
     <TextView
         android:id="@+id/textView"
