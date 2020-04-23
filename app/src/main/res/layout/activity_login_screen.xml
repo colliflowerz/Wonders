@@ -7,37 +7,39 @@
     tools:context=".LoginScreen"
     android:background="@color/darkGrey">
 
+    <pl.droidsonroids.gif.GifImageView
+
+        android:id="@+id/globe"
+        android:layout_width="433dp"
+        android:layout_height="237dp"
+        android:src="@drawable/globegif1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="-8dp"
+        tools:src="@drawable/globegif1" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="250dp"
-        android:text="Im in the login page"
+        android:layout_width="307dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Log in to start your expedition to the 7 New Wonders of the World!"
         android:textColor="@color/lightGrey"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/globe" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        >
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/globepng"
-
-
-            />
-
-    </LinearLayout>
+        />
 
 
 
@@ -57,7 +59,7 @@
         android:id="@+id/username"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:boxStrokeColor="@color/melon"
@@ -67,10 +69,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/lightGrey"
-            android:textColor="@color/lightGrey"
             android:hint="Username"
-            />
+            android:textColor="@color/lightGrey"
+            android:textColorHint="@color/lightGrey" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -93,5 +94,19 @@
             android:textColor="@color/lightGrey"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/wonders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="WONDERS"
+        android:textAlignment="center"
+        android:textColor="@color/lightGrey"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
