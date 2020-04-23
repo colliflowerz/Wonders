@@ -55,6 +55,18 @@
         android:background="@drawable/bg_btn_teal"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
+    <Button
+        android:id="@+id/regoBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/bg_btn_teal"
+        android:text="New Here? Click here to sign up!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/username"
         android:layout_width="320dp"
@@ -62,10 +74,6 @@
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
-
-
-
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -85,7 +93,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username"
         app:endIconMode="password_toggle"
-
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText

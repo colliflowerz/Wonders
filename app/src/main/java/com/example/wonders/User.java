@@ -2,6 +2,7 @@ package com.example.wonders;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity
@@ -13,7 +14,12 @@ public class User {
     private String firstName;
     private String lastName;
 
+    public User(@NonNull String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
+    @Ignore
     public User(@NonNull String username, String password, String firstName, String lastName) {
         this.username = username;
         this.password = password;
