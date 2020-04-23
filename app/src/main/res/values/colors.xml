@@ -3,4 +3,12 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#4472c4</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="darkGrey">#2c2e33</color>
+    <color name="lightGrey">#dedede</color>
+    <color name="mediumGrey">#3c4047</color>
+    <color name="orange">#E97C41</color>
+    <color name="teal">#97E9D9</color>
+    <color name="mediumLightGrey">#67696C</color>
+
+
 </resources>
