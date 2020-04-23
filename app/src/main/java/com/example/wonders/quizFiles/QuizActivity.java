@@ -58,7 +58,7 @@ public class QuizActivity extends AppCompatActivity {
         score = (TextView) findViewById(R.id.score);
         question = (TextView) findViewById(R.id.question);
 
-        score.setText("Score: " + mScore);
+        score.setText("Score: " + mScore+"/5");
 
         updateQuestion(r.nextInt(mQuestionsLength));
 
@@ -68,8 +68,13 @@ public class QuizActivity extends AppCompatActivity {
 
                 if (answer1.getText() == mAnswer) {
                     mScore ++;
-                    score.setText("Score: " + mScore);
-                    updateQuestion(r.nextInt(mQuestionsLength));
+                    score.setText("Score: " + mScore+"/5");
+                    if(mScore!=5){
+                        updateQuestion(r.nextInt(mQuestionsLength));
+                    } else {
+                        congratulations();
+                    }
+
                 } else {
                     gameOver();
                 }
@@ -83,8 +88,12 @@ public class QuizActivity extends AppCompatActivity {
 
                 if (answer2.getText() == mAnswer) {
                     mScore ++;
-                    score.setText("Score: " + mScore);
-                    updateQuestion(r.nextInt(mQuestionsLength));
+                    score.setText("Score: " + mScore+"/5");
+                    if(mScore!=5){
+                        updateQuestion(r.nextInt(mQuestionsLength));
+                    } else {
+                        congratulations();
+                    }
                 } else {
                     gameOver();
                 }
@@ -98,8 +107,12 @@ public class QuizActivity extends AppCompatActivity {
 
                 if (answer3.getText() == mAnswer) {
                     mScore ++;
-                    score.setText("Score: " + mScore);
-                    updateQuestion(r.nextInt(mQuestionsLength));
+                    score.setText("Score: " + mScore+"/5");
+                    if(mScore!=5){
+                        updateQuestion(r.nextInt(mQuestionsLength));
+                    } else {
+                        congratulations();
+                    }
                 } else {
                     gameOver();
                 }
@@ -113,8 +126,12 @@ public class QuizActivity extends AppCompatActivity {
 
                 if (answer4.getText() == mAnswer) {
                     mScore ++;
-                    score.setText("Score: " + mScore);
-                    updateQuestion(r.nextInt(mQuestionsLength));
+                    score.setText("Score: " + mScore+"/5");
+                    if(mScore!=5){
+                        updateQuestion(r.nextInt(mQuestionsLength));
+                    } else {
+                        congratulations();
+                    }
                 } else {
                     gameOver();
                 }
@@ -122,7 +139,13 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
+        if (mScore==5){
+            congratulations();
+        }
+
     }
+
+
 
     private void updateQuestion (int num) {
         question.setText(mQuestions.getQuestion(num));
@@ -132,6 +155,22 @@ public class QuizActivity extends AppCompatActivity {
         answer4.setText(mQuestions.getChoice4(num));
 
         mAnswer = mQuestions.getCorrectAnswer(num);
+    }
+
+    private void congratulations() {
+
+        gameOverDialogue.setContentView(R.layout.congrats_popup_box);
+        close = (ImageView) gameOverDialogue.findViewById(R.id.close);
+        tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gameOverDialogue.dismiss();
+            }
+        });
+        gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        gameOverDialogue.show();
     }
 
     public void gameOver() {
