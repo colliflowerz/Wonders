@@ -22,7 +22,7 @@
         android:layout_above="@id/answer4"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_btn_colour"
+        android:background="@drawable/bg_btn_teal"
         android:textColor="#27292d"
 
         android:text="Button" />
@@ -34,7 +34,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="37dp"
-        android:background="@drawable/bg_btn_colour"
+        android:background="@drawable/bg_btn_teal"
         android:textColor="#27292d"
         android:text="Button" />
 
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/answer3"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_btn_colour"
+        android:background="@drawable/bg_btn_teal"
         android:textColor="#27292d"
         android:text="Button" />
 
@@ -78,7 +78,7 @@
         android:layout_above="@id/answer2"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_btn_colour"
+        android:background="@drawable/bg_btn_teal"
         android:textColor="#27292d"
         android:text="Button" />
 
