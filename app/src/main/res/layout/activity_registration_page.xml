@@ -4,31 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationPage">
+    tools:context=".RegistrationPage"
+    android:background="@color/darkGreenBlue">
+
+    <pl.droidsonroids.gif.GifImageView
+
+        android:id="@+id/globe"
+        android:layout_width="433dp"
+        android:layout_height="237dp"
+        android:src="@drawable/transparentplanegif2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="-8dp"
+        tools:src="@drawable/transparentplanegif2" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="144dp"
-        android:text="Im in the rego screen"
+        android:id="@+id/textView"
+        android:layout_width="307dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Join our WONDERFUL adventure today"
+        android:textColor="@color/lightGrey"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/globe" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/regUsername"
         android:layout_width="325dp"
         android:layout_height="51dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/lightGrey"
             android:hint="Username" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,12 +59,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regUsername"
+        app:endIconMode="password_toggle"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:textColor="@color/lightGrey"
             android:hint="Password" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,27 +74,44 @@
         android:id="@+id/regPasswordConfirm"
         android:layout_width="324dp"
         android:layout_height="62dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regPassword"
+        app:endIconMode="password_toggle"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Confirm Password" />
+            android:hint="Confirm Password"
+            android:textColor="@color/lightGrey"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/regBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/bg_btn_teal"
         app:layout_constraintTop_toBottomOf="@+id/regPasswordConfirm" />
+
+    <TextView
+        android:id="@+id/wonders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="WONDERS"
+        android:textAlignment="center"
+        android:textColor="@color/lightGrey"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
