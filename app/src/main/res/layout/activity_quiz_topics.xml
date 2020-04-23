@@ -64,10 +64,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
                 android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/mediumGreenBlue"
-                app:cardCornerRadius="12dp"
-
-                app:cardElevation="6dp">
+                app:cardBackgroundColor="@color/darkGreenBlue"
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -77,8 +75,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/china" />
 
                     <TextView
@@ -104,10 +102,9 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
                 android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/mediumGreenBlue"
+                app:cardBackgroundColor="@color/darkGreenBlue"
                 app:cardCornerRadius="12dp"
-
-                app:cardElevation="6dp">
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -117,8 +114,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/india" />
 
                     <TextView
@@ -144,10 +141,9 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
                 android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/mediumGreenBlue"
+                app:cardBackgroundColor="@color/darkGreenBlue"
                 app:cardCornerRadius="12dp"
-
-                app:cardElevation="6dp">
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -157,8 +153,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/brazil" />
 
                     <TextView
@@ -182,10 +178,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/mediumGreenBlue"
+                app:cardBackgroundColor="@color/darkGreenBlue"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                app:cardElevation="6dp"
+
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
 
@@ -200,8 +196,8 @@
 
                     <ImageView
                         android:src="@drawable/jordan"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"/>
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"/>
 
                     <TextView
                         android:layout_marginTop="12dp"
@@ -223,10 +219,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/mediumGreenBlue"
+                app:cardBackgroundColor="@color/darkGreenBlue"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                app:cardElevation="6dp"
+
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
 
@@ -241,8 +237,8 @@
 
                     <ImageView
                         android:src="@drawable/picchu"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"/>
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"/>
 
                     <TextView
                         android:layout_marginTop="12dp"
@@ -266,10 +262,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/mediumGreenBlue"
+                app:cardBackgroundColor="@color/darkGreenBlue"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
 
@@ -284,8 +279,8 @@
 
                     <ImageView
                         android:src="@drawable/maya"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"/>
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"/>
 
                     <TextView
                         android:layout_marginTop="12dp"
@@ -309,10 +304,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/mediumGreenBlue"
+                app:cardBackgroundColor="@color/darkGreenBlue"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
 
@@ -327,8 +321,8 @@
 
                     <ImageView
                         android:src="@drawable/rome"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"/>
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"/>
 
                     <TextView
                         android:layout_marginTop="12dp"
