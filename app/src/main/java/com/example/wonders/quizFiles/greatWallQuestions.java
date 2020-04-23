@@ -6,7 +6,7 @@ public class greatWallQuestions {
             "When did the Great Wall of China start being built?",
             "The most well-known sections of the wall were built in the:",
             "How long is the wall built by the Ming Dynasty",
-            "What natural defensive barriers does the Great Wall of China?"
+            "What natural defensive barriers does the Great Wall of China have?"
 
     };
 

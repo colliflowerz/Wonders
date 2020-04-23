@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.example.wonders.quizFiles.QuizActivity;
+import com.example.wonders.quizFiles.QuizTopics;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         quiz.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent4 = new Intent(MainActivity.this, QuizActivity.class);
+                Intent intent4 = new Intent(MainActivity.this, QuizTopics.class);
 
                 startActivity(intent4);
             }
