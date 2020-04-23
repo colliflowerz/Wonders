@@ -20,6 +20,7 @@ public class LoginScreen extends AppCompatActivity {
     public TextInputLayout username;
     public TextInputLayout password;
     public Button login;
+    public Button rego;
 
 
     @Override
@@ -34,6 +35,10 @@ public class LoginScreen extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login = findViewById(R.id.loginBtn);
+        rego = findViewById(R.id.regoBtn);
+
+
+        // NOTE FOR COLLIN - HAVE TO CHANGE THE IF CODE BELOW COS TOO MUCH COPYRIGHT
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +64,14 @@ public class LoginScreen extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Your details are incorrect!", Toast.LENGTH_LONG).show();
 
                 }
+            }
+        });
+
+        rego.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginScreen.this, RegistrationPage.class);
+                startActivity(intent);
             }
         });
 
