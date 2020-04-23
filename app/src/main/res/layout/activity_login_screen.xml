@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginScreen"
-    android:background="@color/darkGrey">
+    android:background="#041924">
 
     <pl.droidsonroids.gif.GifImageView
 
