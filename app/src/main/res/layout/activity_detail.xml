@@ -26,7 +26,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        app:itemTextColor="@drawable/tab_color"
+        android:elevation="10dp"
+        app:itemRippleColor="@color/lightGrey"
+        app:itemIconTint="@drawable/tab_color"
+        app:itemBackground="@color/darkGrey"
         app:menu="@menu/bottom_navigation"
-        android:background="?android:attr/windowBackground"/>
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        android:background="@color/darkGrey"/>
 
 </RelativeLayout>
