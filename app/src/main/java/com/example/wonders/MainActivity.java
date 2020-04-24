@@ -79,15 +79,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-     //  notes = findViewById(R.id.notes);
-     //  notes.setOnClickListener(new View.OnClickListener() {
-     //       @Override
-      ///      public void onClick(View v) {
+       notes = findViewById(R.id.notes);
+       notes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-     //           Intent intent5 = new Intent(MainActivity.this, NotesPage.class);
-     //           startActivity(intent5);
-    //        }
-    //    });
+                Intent intent5 = new Intent(MainActivity.this, NotesPage.class);
+                startActivity(intent5);
+            }
+        });
 
 
     }
