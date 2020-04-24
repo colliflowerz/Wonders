@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginScreen"
-    android:background="#041924">
+    android:background="@drawable/darkmap">
 
     <pl.droidsonroids.gif.GifImageView
 
@@ -47,12 +47,13 @@
         android:id="@+id/loginBtn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="38dp"
         android:text="Login"
+        android:textColor="@color/lightGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/bg_btn_teal"
+        android:background="@drawable/bg_btn"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
@@ -60,7 +61,8 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/bg_btn_teal"
+        android:background="@drawable/bg_btn"
+        android:textColor="@color/lightGrey"
         android:text="New Here? Click here to sign up!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

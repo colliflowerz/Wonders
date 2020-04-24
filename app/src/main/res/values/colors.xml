@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#4472c4</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimaryDark">#2c2e33</color>
+    <color name="colorAccent">#FFF3B0</color>
     <color name="darkGrey">#2c2e33</color>
     <color name="lightGrey">#dedede</color>
     <color name="mediumGrey">#3c4047</color>
@@ -13,6 +13,10 @@
     <color name="melon">#FCBFB7</color>
     <color name="darkGreenBlue">#041924</color>
     <color name="mediumGreenBlue">#1C303A</color>
+    <color name="warm_yellow">#E09F3E</color>
+    <color name="auburn">#9E2A2B</color>
+    <color name="brown">#251605</color>
+    <color name="blond">#fff3b0</color>
 
 
 
