@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    android:background="#8003A9F4">
+    android:background="@color/colorPrimaryDark">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -21,7 +21,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp">
+            android:layout_height="80dp"
+            android:background="@color/charcoalBlue">
 
 
             <TextView

@@ -57,7 +57,6 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
-
                 Intent intent = new Intent(context, NotesDetailActivity.class);
                 intent.putExtra("id", notesAtPosition.getId());
                 context.startActivity(intent);

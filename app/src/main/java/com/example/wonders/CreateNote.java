@@ -3,6 +3,9 @@ package com.example.wonders;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.wonders.SessionData;
+import com.example.wonders.R;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -19,14 +22,14 @@ public class CreateNote extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActionBar actionbar = getSupportActionBar();
+        //ActionBar actionbar = getSupportActionBar();
        // actionbar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
         setContentView(R.layout.activity_create_note);
 
         noteTitle = findViewById(R.id.title);
         noteContent = findViewById(R.id.content);
 
-        add = findViewById(R.id.addNote);
+        add = findViewById(R.id.button);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +49,7 @@ public class CreateNote extends AppCompatActivity {
                 //creating note object to insert into database
                 Notes object = new Notes(nId, nTitle, nContent);
                 NotesPage.notesList.add(object);
+
                 Toast.makeText(CreateNote.this, "Note created!", Toast.LENGTH_SHORT).show();
 
                 //adds note to database and ends activity

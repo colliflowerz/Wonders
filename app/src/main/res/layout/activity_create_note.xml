@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mediumGreenBlue"
     tools:context="CreateNote">
 
     <TextView
@@ -14,8 +15,8 @@
         android:layout_marginTop="32dp"
         android:gravity="top|center"
         android:text="Subject:"
-        android:textColor="#BF000000"
-        android:textColorHint="#BF000000"
+        android:textColor="@color/lightGrey"
+        android:textColorHint="@color/lightGrey"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout"
@@ -30,7 +31,7 @@
         android:layout_weight="1.5"
         android:gravity="top|center"
         android:inputType="textAutoCorrect"
-        android:textColor="#BF000000"
+        android:textColor="@color/lightGrey"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout"></EditText>
 
@@ -45,21 +46,30 @@
         android:hint="Your text here..."
         android:inputType="textMultiLine"
         android:padding="16dp"
-        android:textColor="#BF000000"
+        android:textColor="@color/lightGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1"></EditText>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addNote"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/mediumLightGrey"
+
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        android:cropToPadding="false"
+        android:rotationX="180"
+        android:src="@android:drawable/ic_menu_add"
+        app:backgroundTint="@color/mediumLightGrey"
+        app:borderWidth="1dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_notes"
+        app:maxImageSize="56dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"

@@ -32,6 +32,7 @@ public class NotesPage extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         notesAdapter = new NotesAdapter();
 
+
         notesList = SessionData.mNotesDatabase.notesDao().getAll();
         notesAdapter.setData((ArrayList<Notes>) notesList);
         recyclerView.setAdapter(notesAdapter);

@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/mediumGreenBlue">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.1"
+        android:background="@color/darkGreenBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +25,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="Swipe to Remove"
+        android:textColor="@color/lightGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +37,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="My Notes"
-        android:textColor="#BF000000"
+        android:textColor="@color/lightGrey"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +49,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"
         android:layout_marginBottom="80dp"
+        android:background="@color/mediumGreenBlue"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -55,12 +59,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:clickable="true"
+        android:backgroundTint="@color/mediumLightGrey"
 
+        android:clickable="true"
+        android:cropToPadding="false"
+        android:rotationX="180"
+        android:src="@android:drawable/ic_menu_add"
+        app:backgroundTint="@color/mediumLightGrey"
+        app:borderWidth="1dp"
+        app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_notes"
+        app:maxImageSize="56dp"
+
+
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

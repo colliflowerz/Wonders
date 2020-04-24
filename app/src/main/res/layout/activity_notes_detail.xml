@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mediumGreenBlue"
     tools:context=".NotesDetailActivity">
 
 
@@ -11,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.1"
+        android:background="@color/mediumGreenBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +27,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
-        android:textColor="#BF000000"
+        android:textColor="@color/lightGrey"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dTitle" />
@@ -38,7 +40,7 @@
         android:layout_marginTop="32dp"
         android:paddingEnd="30dp"
         android:text="TextView"
-        android:textColor="#BF000000"
+        android:textColor="@color/lightGrey"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
