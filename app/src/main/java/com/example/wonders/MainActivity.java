@@ -8,7 +8,6 @@ import android.widget.ScrollView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.wonders.quizFiles.QuizActivity;
 import com.example.wonders.quizFiles.QuizTopics;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView funfacts;
     private CardView discover;
     private CardView quiz;
+    private CardView notes;
     private ScrollView bg1;
 
 
@@ -70,16 +70,24 @@ public class MainActivity extends AppCompatActivity {
         }) ;
 
         quiz = findViewById(R.id.quiz);
-        quiz.setOnClickListener((new View.OnClickListener() {
+        quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent4 = new Intent(MainActivity.this, QuizTopics.class);
 
                 startActivity(intent4);
             }
-        }));
+        });
 
+     //  notes = findViewById(R.id.notes);
+     //  notes.setOnClickListener(new View.OnClickListener() {
+     //       @Override
+      ///      public void onClick(View v) {
 
+     //           Intent intent5 = new Intent(MainActivity.this, NotesPage.class);
+     //           startActivity(intent5);
+    //        }
+    //    });
 
 
     }

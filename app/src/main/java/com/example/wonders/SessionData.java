@@ -8,12 +8,18 @@ public class SessionData {
 
     public static UserDatabase mUserDatabase;
     public static User currentUser = new User("collin", "collin", "collin", "zhang");
+    public static NotesDatabase mNotesDatabase;
 
 
     public static void createDB(Context context) {
 
         mUserDatabase = Room.databaseBuilder(context.getApplicationContext(),
                 UserDatabase.class, "user_db").allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
+                .build();
+
+        mNotesDatabase = Room.databaseBuilder(context.getApplicationContext(),
+                NotesDatabase.class, "notes_db").allowMainThreadQueries()
                 .fallbackToDestructiveMigration()
                 .build();
 
