@@ -11,6 +11,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,10 +26,12 @@ import java.util.Random;
 
 public class QuizActivity extends AppCompatActivity {
 
+
     Button answer1, answer2, answer3, answer4, tryAgain, exit;
     TextView score, question, scorePopUp;
-    ImageView close;
+    ImageView close, badge;
     Dialog gameOverDialogue;
+    Animation animation;
 
     private Questions mQuestions = new Questions();
 
@@ -168,6 +172,7 @@ public class QuizActivity extends AppCompatActivity {
                 gameOverDialogue.dismiss();
             }
         });
+        rotateAnimation();
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         gameOverDialogue.show();
@@ -177,6 +182,7 @@ public class QuizActivity extends AppCompatActivity {
         gameOverDialogue.setContentView(R.layout.quiz_popup_box);
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);
         tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
+        badge = (ImageView) gameOverDialogue.findViewById(R.id.badge);
         exit = (Button) gameOverDialogue.findViewById(R.id.exitBtn);
         scorePopUp = (TextView) gameOverDialogue.findViewById(R.id.score);
 
@@ -187,8 +193,13 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
+        rotateAnimation();
+
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         scorePopUp.setText("Your score is: " + mScore);
+
+
+
         tryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -204,6 +215,11 @@ public class QuizActivity extends AppCompatActivity {
         });
         gameOverDialogue.show();
 
+    }
+
+    private void rotateAnimation() {
+        animation = AnimationUtils.loadAnimation(this, R.anim.rotate);
+        badge.startAnimation(animation);
     }
 
 

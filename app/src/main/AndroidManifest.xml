@@ -34,6 +34,7 @@
         <activity android:name=".quizFiles.ColosseumQuizActivity" />
         <activity android:name=".quizFiles.TajMahalQuizActivity" />
         <activity android:name=".quizFiles.GreatWallQuizActivity" />
+        <activity android:name=".quizFiles.QuizTopics" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

@@ -11,6 +11,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,8 +28,9 @@ public class GreatWallQuizActivity extends AppCompatActivity {
 
     Button answer1, answer2, answer3, answer4, tryAgain, exit;
     TextView score, question, scorePopUp;
-    ImageView close;
+    ImageView close, badge;
     Dialog gameOverDialogue;
+    Animation animation;
 
     private greatWallQuestions mQuestions = new greatWallQuestions();
 
@@ -161,15 +164,17 @@ public class GreatWallQuizActivity extends AppCompatActivity {
 
         gameOverDialogue.setContentView(R.layout.congrats_popup_box);
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);
+        badge = (ImageView) gameOverDialogue.findViewById(R.id.badge);
         tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
+        badge.setImageResource(R.drawable.china);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gameOverDialogue.dismiss();
             }
         });
+        rotateAnimation();
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
         gameOverDialogue.show();
     }
 
@@ -186,6 +191,7 @@ public class GreatWallQuizActivity extends AppCompatActivity {
                 gameOverDialogue.dismiss();
             }
         });
+
 
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         scorePopUp.setText("Your score is: " + mScore);
@@ -204,6 +210,11 @@ public class GreatWallQuizActivity extends AppCompatActivity {
         });
         gameOverDialogue.show();
 
+    }
+
+    private void rotateAnimation() {
+        animation = AnimationUtils.loadAnimation(this, R.anim.rotate);
+        badge.startAnimation(animation);
     }
 
 }
