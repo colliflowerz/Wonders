@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegistrationPage"
-    android:background="@color/darkGreenBlue">
+    android:background="@drawable/darkmap">
 
     <pl.droidsonroids.gif.GifImageView
 
@@ -21,11 +21,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="307dp"
-        android:layout_height="43dp"
+        android:layout_width="319dp"
+        android:layout_height="33dp"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:text="Join our WONDERFUL adventure today"
+        android:text="Join our WONDERFUL adventure today!"
         android:textColor="@color/lightGrey"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,11 +94,12 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:background="@drawable/bg_btn"
         android:text="Register"
+        android:textColor="@color/lightGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/bg_btn_teal"
         app:layout_constraintTop_toBottomOf="@+id/regPasswordConfirm" />
 
     <TextView

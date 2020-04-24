@@ -5,4 +5,4 @@
     android:scrollbars="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2c2e33"/>
+    android:background="@drawable/darkmap"/>
