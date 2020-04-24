@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textLanding"
                 android:layout_marginTop="4dp"
-                android:text="Welcome to your expedition to the New 7 Wonders of the World!"
+                android:text="Your Gateway to the New 7 Wonders of the World!"
                 android:textColor="#FFFFFF"
                 android:textSize="22sp" />
 
