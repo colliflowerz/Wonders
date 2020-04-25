@@ -65,6 +65,9 @@ public class QuizDatabseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_databse);
 
 
+        gameOverDialogue =new Dialog(this);
+
+
         btn1= findViewById(R.id.option1);
         btn2 = findViewById(R.id.option2);
         btn3= findViewById(R.id.option3);
@@ -89,6 +92,8 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
         options = QuizBank.getOptions(QuizTopics.name);
 
+
+
         //counts amount of options objects
         questionCountTotal = options.size();
 
@@ -111,6 +116,8 @@ public class QuizDatabseActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
     //show next question
     private void refreshQuestion() {
@@ -160,6 +167,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
             currentScore.setText(String.valueOf(score));
         }
 
+
         showAnswer();
 
     }
@@ -197,8 +205,20 @@ public class QuizDatabseActivity extends AppCompatActivity {
             mark.setText("Next Question");
             //refreshQuestion();
         } else {
-            mark.setText("Finish Quiz");
-            finishQuiz();
+
+
+
+                mark.setText("Finish Quiz");
+
+                if(correctCount==5){
+                    congratulations();
+                } else {
+
+                    finishQuiz();
+                }
+
+
+
         }
 
 
@@ -206,26 +226,28 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
     //finish quiz
     private void finishQuiz() {
+
         //displays correct score
         correctScore.setVisibility(View.VISIBLE);
         correctScore.setText("Your Score: " + correctCount + " / 5 ");
 
-        //collect badge popup
-        /*if(correctCount ==5) {
-            congratulations();
-        }*/
+       /* if(correctCount==5){
+           congratulations();
+        } else { */
+
+            mark.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                }
 
 
+            });
+
+        //}
         //take user to landing page
-        mark.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
 
-
-        });
 
     }
 
@@ -233,6 +255,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
         gameOverDialogue.setContentView(R.layout.congrats_popup_box);
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);
+        //rotateAnimation();
         tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -240,7 +263,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
                 gameOverDialogue.dismiss();
             }
         });
-        rotateAnimation();
+
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         gameOverDialogue.show();
