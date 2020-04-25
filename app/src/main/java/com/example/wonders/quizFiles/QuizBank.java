@@ -100,7 +100,7 @@ public class QuizBank {
                     options.add(chinaQ1 = new QuizOptions("The Great Wall of China was built in order to:", "Defeat the huns", "Protect and consolidate Chinese territories", "Create a path between China and Japan", "All of the above", 2));
                     options.add(chinaQ2 = new QuizOptions("When did the Great Wall of China start being built?", "2nd Century BC", "5th Century BC", "6th Century BC", "7th Century BC",4));
                     options.add(chinaQ3 = new QuizOptions("The most well-known sections of the wall were built in the:", "Qing Dynasty", "Sing Dynasty", "Ming Dynasty", "Ting Dynasty", 3));
-                    options.add(chinaQ4= new QuizOptions("How long is the wall built by the Ming Dynasty", "8850km", "100km", "800m", "8850m",1));
+                    options.add(chinaQ4= new QuizOptions("How long is the wall built by the Ming Dynasty", "8850km", "100km", "800m", "850m",1));
                     options.add(chinaQ5= new QuizOptions("What natural defensive barriers does the Great Wall of China have?", "Oceans and Mountains", "Hills and Rivers", "Desert", "Ocean", 2));
                     break;
 

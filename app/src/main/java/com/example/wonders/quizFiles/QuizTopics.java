@@ -43,7 +43,7 @@ public class QuizTopics extends AppCompatActivity {
         china.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizTopics.this, GreatWallQuizActivity.class);
+                Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
                 name= "The Great Wall of China";
 
                 startActivity(intent);
@@ -54,7 +54,8 @@ public class QuizTopics extends AppCompatActivity {
         india.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizTopics.this, TajMahalQuizActivity.class);
+                Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
+                name= "Taj Mahal";
 
                 startActivity(intent);
             }
@@ -64,7 +65,8 @@ public class QuizTopics extends AppCompatActivity {
         brazil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizTopics.this, ChristQuizActivity.class);
+                Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
+                name = "Christ the Redeemer";
 
                 startActivity(intent);
             }
@@ -74,7 +76,8 @@ public class QuizTopics extends AppCompatActivity {
         jordan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizTopics.this, PetraQuizActivity.class);
+                Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
+                name= "Petra";
 
                 startActivity(intent);
             }
@@ -84,7 +87,8 @@ public class QuizTopics extends AppCompatActivity {
         machu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizTopics.this, MachuQuizActivity.class);
+                Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
+                name="Machu Picchu";
 
                 startActivity(intent);
             }
@@ -94,7 +98,8 @@ public class QuizTopics extends AppCompatActivity {
         maya.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizTopics.this, ChichenQuizActivity.class);
+                Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
+                name = "Chichen Itza";
 
                 startActivity(intent);
             }
@@ -104,7 +109,9 @@ public class QuizTopics extends AppCompatActivity {
         rome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizTopics.this, ColosseumQuizActivity.class);
+                Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
+
+                name= "Colosseum";
 
                 startActivity(intent);
             }

@@ -2,12 +2,17 @@ package com.example.wonders.quizFiles;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -46,6 +51,13 @@ public class QuizDatabseActivity extends AppCompatActivity {
     private int score = 0;
     private int correctCount;
     private QuizOptions currentQuestion;
+
+    Dialog gameOverDialogue;
+    Animation animation;
+
+    Button answer1, answer2, answer3, answer4, tryAgain, exit;
+    TextView scorePopUp;
+    ImageView close, badge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -196,7 +208,13 @@ public class QuizDatabseActivity extends AppCompatActivity {
     private void finishQuiz() {
         //displays correct score
         correctScore.setVisibility(View.VISIBLE);
-        correctScore.setText("Your Score: " + correctCount + " / 8 ");
+        correctScore.setText("Your Score: " + correctCount + " / 5 ");
+
+        //collect badge popup
+        /*if(correctCount ==5) {
+            congratulations();
+        }*/
+
 
         //take user to landing page
         mark.setOnClickListener(new View.OnClickListener() {
@@ -209,5 +227,27 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
         });
 
+    }
+
+    private void congratulations() {
+
+        gameOverDialogue.setContentView(R.layout.congrats_popup_box);
+        close = (ImageView) gameOverDialogue.findViewById(R.id.close);
+        tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gameOverDialogue.dismiss();
+            }
+        });
+        rotateAnimation();
+        gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        gameOverDialogue.show();
+    }
+
+    private void rotateAnimation() {
+        animation = AnimationUtils.loadAnimation(this, R.anim.rotate);
+        badge.startAnimation(animation);
     }
 }
