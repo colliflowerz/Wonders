@@ -44,8 +44,8 @@
     </androidx.cardview.widget.CardView>
 
     <ScrollView
-        android:layout_width="414dp"
-        android:layout_height="583dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/mediumGreenBlue"
         app:layout_constraintTop_toBottomOf="@+id/wonder_cardview"
         tools:layout_editor_absoluteX="5dp">
