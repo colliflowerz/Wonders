@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.wonders.BadgesActivity;
 import com.example.wonders.MainActivity;
 import com.example.wonders.R;
 import com.example.wonders.SessionData;
@@ -177,10 +178,12 @@ public class GreatWallQuizActivity extends AppCompatActivity {
         rotateAnimation();
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         SessionData.currentUser.setBadge1(true);
+        //Update the badge status in the database
+        SessionData.mUserDatabase.userDao().updateBadge1(SessionData.currentUser.getUsername());
         tryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), QuizTopics.class);
+                Intent intent = new Intent(getApplicationContext(), BadgesActivity.class);
                 startActivity(intent);
             }
         });

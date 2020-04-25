@@ -21,7 +21,7 @@ public class PetraQuestions {
     };
 
     private String mCorrectAnswers [] = {
-            "Raqmu", "7000BC", "Proximity to trade routes", "Southern Jordan", "20000"
+            "Raqmu", "7000BC", "Proximity to trade routes", "Southern Jordan", "20,000"
     };
 
     public String getQuestion (int a){

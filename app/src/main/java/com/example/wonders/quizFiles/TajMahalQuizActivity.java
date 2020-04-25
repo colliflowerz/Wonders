@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.wonders.BadgesActivity;
 import com.example.wonders.R;
 import com.example.wonders.SessionData;
 
@@ -26,7 +27,7 @@ public class TajMahalQuizActivity extends AppCompatActivity {
     ImageView close;
     Dialog gameOverDialogue;
 
-    private greatWallQuestions mQuestions = new greatWallQuestions();
+    private TajMahalQuestions mQuestions = new TajMahalQuestions();
 
     private String mAnswer;
     private int mScore = 0;
@@ -162,7 +163,7 @@ public class TajMahalQuizActivity extends AppCompatActivity {
         tryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), QuizTopics.class);
+                Intent intent = new Intent(getApplicationContext(), BadgesActivity.class);
                 startActivity(intent);
             }
         });
@@ -175,6 +176,8 @@ public class TajMahalQuizActivity extends AppCompatActivity {
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         SessionData.currentUser.setBadge2(true);
+        //Update the badge status in the database
+        SessionData.mUserDatabase.userDao().updateBadge2(SessionData.currentUser.getUsername());
         gameOverDialogue.show();
     }
 

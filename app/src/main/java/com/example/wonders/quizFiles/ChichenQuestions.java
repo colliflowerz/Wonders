@@ -22,7 +22,7 @@ public class ChichenQuestions {
     };
 
     private String mCorrectAnswers [] = {
-            "Yucatan", "Colonial (1521–1821)", "Mesoamerican literature", "An archaeological site", "Mayan Civilisations"
+            "Yucatan", "Colonial (1521–1821)", "Mesoamerican literature", "An archaeological site", "Mayan Civilisation"
     };
 
     public String getQuestion (int a){

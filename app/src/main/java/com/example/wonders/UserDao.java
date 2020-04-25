@@ -31,6 +31,30 @@ public interface UserDao {
     @Query("SELECT * FROM User WHERE username = :username")
     User returnUserByUserName (String username);
 
+    @Query("UPDATE User SET badge1 = 1 WHERE username = :username")
+    void updateBadge1 (String username);
+
+    @Query("UPDATE User SET badge2 = 1 WHERE username = :username")
+    void updateBadge2 (String username);
+
+    @Query("UPDATE User SET badge3 = 1 WHERE username = :username")
+    void updateBadge3 (String username);
+
+    @Query("UPDATE User SET badge4 = 1 WHERE username = :username")
+    void updateBadge4 (String username);
+
+    @Query("UPDATE User SET badge5 = 1 WHERE username = :username")
+    void updateBadge5 (String username);
+
+    @Query("UPDATE User SET badge6 = 1 WHERE username = :username")
+    void updateBadge6 (String username);
+
+    @Query("UPDATE User SET badge7 = 1 WHERE username = :username")
+    void updateBadge7 (String username);
+
+    @Query("UPDATE User SET badge8 = 1 WHERE username = :username")
+    void updateBadge8 (String username);
+
 
 }
 
