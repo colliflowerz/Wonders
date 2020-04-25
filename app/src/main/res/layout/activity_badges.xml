@@ -89,7 +89,7 @@
                         android:text="The Great Wall"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
 
                 </LinearLayout>
@@ -129,7 +129,7 @@
                         android:text="Taj Mahal"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
 
                 </LinearLayout>
@@ -170,7 +170,7 @@
                         android:text="Christ the Redeemer"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
 
                 </LinearLayout>
@@ -213,7 +213,7 @@
                         android:text="Petra"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -252,7 +252,7 @@
                         android:text="Machu Picchu"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -291,7 +291,7 @@
                         android:text="Chichen Itza"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -329,7 +329,7 @@
                         android:text="Colosseum"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -369,7 +369,7 @@
                         android:text="The Wonderer"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
