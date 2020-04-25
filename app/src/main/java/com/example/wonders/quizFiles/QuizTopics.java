@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -33,7 +34,7 @@ public class QuizTopics extends AppCompatActivity {
 
     public static String name;
 
-    public static ImageView icon;
+
 
 
     @Override
@@ -48,19 +49,20 @@ public class QuizTopics extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
                 name= "The Great Wall of China";
-                icon.setImageResource(R.drawable.china);
+
 
                 startActivity(intent);
             }
         });
 
         india = findViewById(R.id.card2);
+
         india.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
                 name= "Taj Mahal";
-                icon.setImageResource(R.drawable.india);
+
 
                 startActivity(intent);
             }
@@ -72,7 +74,7 @@ public class QuizTopics extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
                 name = "Christ the Redeemer";
-                icon.setImageResource(R.drawable.brazil);
+
 
                 startActivity(intent);
             }
@@ -84,7 +86,7 @@ public class QuizTopics extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
                 name= "Petra";
-                icon.setImageResource(R.drawable.jordan);
+
 
                 startActivity(intent);
             }
@@ -96,7 +98,7 @@ public class QuizTopics extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
                 name="Machu Picchu";
-                icon.setImageResource(R.drawable.picchu);
+
 
                 startActivity(intent);
             }
@@ -108,7 +110,7 @@ public class QuizTopics extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
                 name = "Chichen Itza";
-                icon.setImageResource(R.drawable.maya);
+
 
                 startActivity(intent);
             }
@@ -120,7 +122,6 @@ public class QuizTopics extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(QuizTopics.this, QuizDatabseActivity.class);
                 name= "Colosseum";
-                icon.setImageResource(R.drawable.rome);
 
                 startActivity(intent);
             }

@@ -18,8 +18,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.wonders.BadgesActivity;
 import com.example.wonders.MainActivity;
 import com.example.wonders.R;
+import com.example.wonders.SessionData;
 
 import java.util.ArrayList;
 
@@ -256,6 +258,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
         gameOverDialogue.setContentView(R.layout.congrats_popup_box);
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);
         //rotateAnimation();
+
         tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -263,6 +266,18 @@ public class QuizDatabseActivity extends AppCompatActivity {
                 gameOverDialogue.dismiss();
             }
         });
+
+        tryAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), BadgesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        SessionData.currentUser.setBadge5(true);
+        //Update the badge status in the database
+        SessionData.mUserDatabase.userDao().updateBadge5(SessionData.currentUser.getUsername());
 
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
