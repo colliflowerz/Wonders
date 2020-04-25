@@ -33,7 +33,7 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
 
 
     public static class DiscoverViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView name;
+        private TextView name, desc;
         private ImageView instagram, google, youtube;
         private RecyclerViewClickListener mListener;
 
@@ -49,6 +49,8 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
             youtube.setTag(this);
             google = v.findViewById(R.id.google);
             google.setTag(this);
+
+            desc= v.findViewById(R.id.desc);
 
 
 
@@ -72,6 +74,7 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
 
         Wonder wonder = mWonders.get(position);
         holder.name.setText(wonder.getName());
+        holder.desc.setText(wonder.getDesc());
         holder.google.setTag(wonder);
         holder.google.setClickable(true);
         holder.instagram.setTag(wonder);
