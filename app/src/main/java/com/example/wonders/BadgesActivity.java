@@ -85,20 +85,15 @@ public class BadgesActivity extends AppCompatActivity {
             finalBadge.startAnimation(animation);
         }
 
-        if(SessionData.currentUser.isBadge1()){
-            if(SessionData.currentUser.isBadge2()){
-                if(SessionData.currentUser.isBadge3()){
-                    if(SessionData.currentUser.isBadge4()){
-                        if(SessionData.currentUser.isBadge5()){
-                            if(SessionData.currentUser.isBadge6()){
-                                if(SessionData.currentUser.isBadge7()){
-                                    SessionData.currentUser.setBadge8(true);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        //If all the badges are collected, you get rewarded with the final badge
+        if (SessionData.currentUser.isBadge1()
+                && SessionData.currentUser.isBadge2()
+                && SessionData.currentUser.isBadge3()
+                && SessionData.currentUser.isBadge4()
+                && SessionData.currentUser.isBadge5()
+                && SessionData.currentUser.isBadge6()
+                && SessionData.currentUser.isBadge7()){
+            SessionData.currentUser.setBadge8(true);
         }
     }
 
