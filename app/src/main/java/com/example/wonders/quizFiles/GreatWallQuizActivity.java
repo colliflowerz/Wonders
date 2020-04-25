@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.example.wonders.MainActivity;
 import com.example.wonders.R;
+import com.example.wonders.SessionData;
 
 import org.w3c.dom.Text;
 
@@ -175,6 +176,14 @@ public class GreatWallQuizActivity extends AppCompatActivity {
         });
         rotateAnimation();
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        SessionData.currentUser.setBadge1(true);
+        tryAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), QuizTopics.class);
+                startActivity(intent);
+            }
+        });
         gameOverDialogue.show();
     }
 
@@ -183,6 +192,7 @@ public class GreatWallQuizActivity extends AppCompatActivity {
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);
         tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
         exit = (Button) gameOverDialogue.findViewById(R.id.exitBtn);
+
         scorePopUp = (TextView) gameOverDialogue.findViewById(R.id.score);
 
         close.setOnClickListener(new View.OnClickListener() {

@@ -7,7 +7,7 @@ import androidx.room.Room;
 public class SessionData {
 
     public static UserDatabase mUserDatabase;
-    public static User currentUser = new User("collin", "collin", "collin", "zhang");
+    public static User currentUser = new User("collin", "collin", false, true,true,false,false,false,false,false);
     public static NotesDatabase mNotesDatabase;
 
 
@@ -17,6 +17,7 @@ public class SessionData {
                 UserDatabase.class, "user_db").allowMainThreadQueries()
                 .fallbackToDestructiveMigration()
                 .build();
+
 
         mNotesDatabase = Room.databaseBuilder(context.getApplicationContext(),
                 NotesDatabase.class, "notes_db").allowMainThreadQueries()

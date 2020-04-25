@@ -17,9 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private CardView discover;
     private CardView quiz;
     private CardView notes;
+    private CardView badges;
     private ScrollView bg1;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +88,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+       badges = findViewById(R.id.badges);
+       badges.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent6 = new Intent(MainActivity.this, BadgesActivity.class);
+               startActivity(intent6);
+           }
+       });
 
     }
 

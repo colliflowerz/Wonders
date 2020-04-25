@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wonders.R;
+import com.example.wonders.SessionData;
 
 import java.util.Random;
 
@@ -158,6 +159,13 @@ public class ChristQuizActivity extends AppCompatActivity {
         gameOverDialogue.setContentView(R.layout.congrats_popup_box);
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);
         tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
+        tryAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), QuizTopics.class);
+                startActivity(intent);
+            }
+        });
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -165,6 +173,8 @@ public class ChristQuizActivity extends AppCompatActivity {
             }
         });
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        SessionData.currentUser.setBadge3(true);
 
         gameOverDialogue.show();
     }

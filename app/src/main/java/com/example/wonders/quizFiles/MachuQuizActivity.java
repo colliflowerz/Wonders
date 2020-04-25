@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wonders.R;
+import com.example.wonders.SessionData;
 
 import java.util.Random;
 
@@ -164,8 +165,16 @@ public class MachuQuizActivity extends AppCompatActivity {
                 gameOverDialogue.dismiss();
             }
         });
+        tryAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), QuizTopics.class);
+                startActivity(intent);
+            }
+        });
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
+        SessionData.currentUser.setBadge5(true);
         gameOverDialogue.show();
     }
 
