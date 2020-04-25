@@ -59,6 +59,7 @@ public class LoginScreen extends AppCompatActivity {
                     // Login successful, creating user
                     SessionData.currentUser = user;
                     Toast.makeText(getApplicationContext(), "Your details are correct!", Toast.LENGTH_LONG).show();
+                    finish();
                 } else {
                     // Incorrect credentials
                     Toast.makeText(getApplicationContext(), "Your details are incorrect!", Toast.LENGTH_LONG).show();
