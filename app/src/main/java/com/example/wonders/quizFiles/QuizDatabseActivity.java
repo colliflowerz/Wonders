@@ -257,7 +257,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
         gameOverDialogue.setContentView(R.layout.congrats_popup_box);
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);
         //rotateAnimation();
-
+        badge = (ImageView) gameOverDialogue.findViewById(R.id.badge);
         tryAgain = (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -290,24 +290,31 @@ public class QuizDatabseActivity extends AppCompatActivity {
         if (name.equals("The Great Wall of China")) {
             SessionData.currentUser.setBadge1(true);
             SessionData.mUserDatabase.userDao().updateBadge1(SessionData.currentUser.getUsername());
+            badge.setImageResource(R.drawable.china);
         } else if (name.equals("Chichen Itza")) {
             SessionData.currentUser.setBadge6(true);
             SessionData.mUserDatabase.userDao().updateBadge6(SessionData.currentUser.getUsername());
+            badge.setImageResource(R.drawable.maya);
         } else if (name.equals("Colosseum")) {
             SessionData.currentUser.setBadge7(true);
             SessionData.mUserDatabase.userDao().updateBadge7(SessionData.currentUser.getUsername());
+            badge.setImageResource(R.drawable.rome);
         } else if (name.equals("Taj Mahal")) {
             SessionData.currentUser.setBadge2(true);
             SessionData.mUserDatabase.userDao().updateBadge2(SessionData.currentUser.getUsername());
+            badge.setImageResource(R.drawable.india);
         } else if (name.equals("Machu Picchu")) {
             SessionData.currentUser.setBadge5(true);
             SessionData.mUserDatabase.userDao().updateBadge5(SessionData.currentUser.getUsername());
+            badge.setImageResource(R.drawable.picchu);
         } else if (name.equals("Christ the Redeemer")) {
             SessionData.currentUser.setBadge3(true);
             SessionData.mUserDatabase.userDao().updateBadge3(SessionData.currentUser.getUsername());
+            badge.setImageResource(R.drawable.brazil);
         } else if (name.equals("Petra")) {
             SessionData.currentUser.setBadge4(true);
             SessionData.mUserDatabase.userDao().updateBadge4(SessionData.currentUser.getUsername());
+            badge.setImageResource(R.drawable.jordan);
         }
     }
 
