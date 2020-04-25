@@ -67,12 +67,12 @@ public class QuizDatabseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_databse);
 
 
-        gameOverDialogue =new Dialog(this);
+        gameOverDialogue = new Dialog(this);
 
 
-        btn1= findViewById(R.id.option1);
+        btn1 = findViewById(R.id.option1);
         btn2 = findViewById(R.id.option2);
-        btn3= findViewById(R.id.option3);
+        btn3 = findViewById(R.id.option3);
         btn4 = findViewById(R.id.option4);
 
         radioGroup = findViewById(R.id.radioGroup);
@@ -93,7 +93,6 @@ public class QuizDatabseActivity extends AppCompatActivity {
         //get q's
 
         options = QuizBank.getOptions(QuizTopics.name);
-
 
 
         //counts amount of options objects
@@ -121,6 +120,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
 
     }
+
     //show next question
     private void refreshQuestion() {
         //sets radio button text colour to default
@@ -149,6 +149,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
             finish();
         }
     }
+
     private void markQuestion() {
         answered = true;
 
@@ -163,7 +164,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
         //If the answer selected is correct
         if (answerNo == currentQuestion.getAnswerNumber()) {
-            score ++; //increase score by 1
+            score++; //increase score by 1
             correctCount++; //increases number of correct questions by 1
             currentScore.setVisibility(View.VISIBLE);
             currentScore.setText(String.valueOf(score));
@@ -209,16 +210,14 @@ public class QuizDatabseActivity extends AppCompatActivity {
         } else {
 
 
+            mark.setText("Finish Quiz");
 
-                mark.setText("Finish Quiz");
+            if (correctCount == 5) {
+                congratulations();
+            } else {
 
-                if(correctCount==5){
-                    congratulations();
-                } else {
-
-                    finishQuiz();
-                }
-
+                finishQuiz();
+            }
 
 
         }
@@ -237,15 +236,15 @@ public class QuizDatabseActivity extends AppCompatActivity {
            congratulations();
         } else { */
 
-            mark.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                }
+        mark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
 
 
-            });
+        });
 
         //}
         //take user to landing page
@@ -259,7 +258,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);
         //rotateAnimation();
 
-        tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
+        tryAgain = (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -275,10 +274,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
             }
         });
 
-        SessionData.currentUser.setBadge5(true);
-        //Update the badge status in the database
-        SessionData.mUserDatabase.userDao().updateBadge5(SessionData.currentUser.getUsername());
-
+        updateBadge(QuizTopics.name);
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         gameOverDialogue.show();
@@ -288,4 +284,31 @@ public class QuizDatabseActivity extends AppCompatActivity {
         animation = AnimationUtils.loadAnimation(this, R.anim.rotate);
         badge.startAnimation(animation);
     }
+
+    //Updates the badge status if you pass the quiz. Through the user class and the database.
+    private void updateBadge(String name) {
+        if (name.equals("The Great Wall of China")) {
+            SessionData.currentUser.setBadge1(true);
+            SessionData.mUserDatabase.userDao().updateBadge1(SessionData.currentUser.getUsername());
+        } else if (name.equals("Chichen Itza")) {
+            SessionData.currentUser.setBadge6(true);
+            SessionData.mUserDatabase.userDao().updateBadge6(SessionData.currentUser.getUsername());
+        } else if (name.equals("Colosseum")) {
+            SessionData.currentUser.setBadge7(true);
+            SessionData.mUserDatabase.userDao().updateBadge7(SessionData.currentUser.getUsername());
+        } else if (name.equals("Taj Mahal")) {
+            SessionData.currentUser.setBadge2(true);
+            SessionData.mUserDatabase.userDao().updateBadge2(SessionData.currentUser.getUsername());
+        } else if (name.equals("Machu Picchu")) {
+            SessionData.currentUser.setBadge5(true);
+            SessionData.mUserDatabase.userDao().updateBadge5(SessionData.currentUser.getUsername());
+        } else if (name.equals("Christ the Redeemer")) {
+            SessionData.currentUser.setBadge3(true);
+            SessionData.mUserDatabase.userDao().updateBadge3(SessionData.currentUser.getUsername());
+        } else if (name.equals("Petra")) {
+            SessionData.currentUser.setBadge4(true);
+            SessionData.mUserDatabase.userDao().updateBadge4(SessionData.currentUser.getUsername());
+        }
+    }
+
 }
