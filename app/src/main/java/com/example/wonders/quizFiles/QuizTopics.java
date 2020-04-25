@@ -30,6 +30,7 @@ public class QuizTopics extends AppCompatActivity {
     private TextView romeText;
     private TextView chichenText;
 
+    public static String name;
 
 
     @Override
@@ -38,10 +39,12 @@ public class QuizTopics extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_topics);
 
         china = findViewById(R.id.card1);
+        chinaText = findViewById(R.id.chinaText);
         china.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(QuizTopics.this, GreatWallQuizActivity.class);
+                name= "The Great Wall of China";
 
                 startActivity(intent);
             }

@@ -294,7 +294,7 @@
                         android:layout_height="70dp"/>
 
                     <TextView
-                        android:id="chichenText"
+                        android:id="@+id/chichenText"
                         android:layout_marginTop="12dp"
                         android:textSize="20sp"
                         android:textAlignment="center"

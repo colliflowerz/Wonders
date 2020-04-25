@@ -75,7 +75,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
         //get q's
 
-        options = QuizBank.getOptions(WondersActivity.name);
+        options = QuizBank.getOptions(QuizTopics.name);
 
         //counts amount of options objects
         questionCountTotal = options.size();
