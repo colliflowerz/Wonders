@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.wonders.BadgesActivity;
 import com.example.wonders.R;
 import com.example.wonders.SessionData;
 
@@ -168,7 +169,7 @@ public class ColosseumQuizActivity extends AppCompatActivity {
         tryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), QuizTopics.class);
+                Intent intent = new Intent(getApplicationContext(), BadgesActivity.class);
                 startActivity(intent);
             }
         });

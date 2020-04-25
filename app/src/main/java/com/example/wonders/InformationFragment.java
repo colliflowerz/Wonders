@@ -72,7 +72,8 @@ public class InformationFragment extends Fragment {
                     @Override
                     public void onResponse(String response) {
                         String string = (response.substring(response.lastIndexOf("extract")+10,response.length()-5));
-
+                        string = string.replace("\\n", "\n\n");
+                        string = string.replaceAll("\\(.*?\\)", "");
                         // Display
                         description.setText(string);
                     }

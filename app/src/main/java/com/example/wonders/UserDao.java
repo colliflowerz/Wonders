@@ -31,6 +31,9 @@ public interface UserDao {
     @Query("SELECT * FROM User WHERE username = :username")
     User returnUserByUserName (String username);
 
+    @Query("UPDATE User SET badge6 = 'true' WHERE username = :username")
+    void updateBadge6 (String username);
+
 
 }
 
