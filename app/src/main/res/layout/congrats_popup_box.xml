@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="@color/mediumGrey"
+        app:cardBackgroundColor="@color/darkGreenBlue"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -110,7 +110,7 @@
                         android:text="Click here to earn your badge"
                         android:textSize="12sp"
                         android:textColor="@color/lightGrey"
-                        android:background="@drawable/bg_btn_medium_light_grey"
+                        android:background="@drawable/bg_mediumbluegreen"
                         android:layout_gravity="center"
 
                         />

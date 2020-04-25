@@ -189,19 +189,19 @@ public class QuizDatabseActivity extends AppCompatActivity {
         switch (currentQuestion.getAnswerNumber()) {
             case 1:
                 btn1.setTextColor(Color.GREEN);
-                status.setText("Answer 1 is Correct!");
+                status.setText("The correct answer is Answer 1");
                 break;
             case 2:
                 btn2.setTextColor(Color.GREEN);
-                status.setText("Answer 2 is Correct!");
+                status.setText("The correct answer is Answer 2");
                 break;
             case 3:
                 btn3.setTextColor(Color.GREEN);
-                status.setText("Answer 3 is Correct!");
+                status.setText("The correct answer is Answer 3");
                 break;
             case 4:
                 btn4.setTextColor(Color.GREEN);
-                status.setText("Answer 4 is Correct!");
+                status.setText("The correct answer is Answer 4");
                 break;
         }
         if (questionCounter < questionCountTotal) {
@@ -216,7 +216,13 @@ public class QuizDatabseActivity extends AppCompatActivity {
                 congratulations();
             } else {
 
-                finishQuiz();
+                if(correctCount<5){
+                    gameOver();
+                } else {
+                    finishQuiz();
+                }
+
+                //finishQuiz();
             }
 
 
@@ -232,10 +238,8 @@ public class QuizDatabseActivity extends AppCompatActivity {
         correctScore.setVisibility(View.VISIBLE);
         correctScore.setText("Your Score: " + correctCount + " / 5 ");
 
-       /* if(correctCount==5){
-           congratulations();
-        } else { */
 
+        //take user to landing page
         mark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -246,8 +250,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
         });
 
-        //}
-        //take user to landing page
+
 
 
     }
@@ -283,6 +286,47 @@ public class QuizDatabseActivity extends AppCompatActivity {
     private void rotateAnimation() {
         animation = AnimationUtils.loadAnimation(this, R.anim.rotate);
         badge.startAnimation(animation);
+    }
+
+    //pops up when the user does not get the required points
+
+    public void gameOver() {
+        gameOverDialogue.setContentView(R.layout.quiz_popup_box);
+        close = (ImageView) gameOverDialogue.findViewById(R.id.close);
+        tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
+        badge = (ImageView) gameOverDialogue.findViewById(R.id.badge);
+        exit = (Button) gameOverDialogue.findViewById(R.id.exitBtn);
+        scorePopUp = (TextView) gameOverDialogue.findViewById(R.id.score);
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gameOverDialogue.dismiss();
+            }
+        });
+
+        //rotateAnimation();
+
+        gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        scorePopUp.setText("Your score is: " + correctCount);
+
+
+
+        tryAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), QuizDatabseActivity.class));
+            }
+        });
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+        gameOverDialogue.show();
+
     }
 
     //Updates the badge status if you pass the quiz. Through the user class and the database.
