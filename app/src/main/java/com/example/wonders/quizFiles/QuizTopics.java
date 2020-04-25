@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.wonders.ListOfWonders;
 import com.example.wonders.MainActivity;
@@ -20,6 +21,15 @@ public class QuizTopics extends AppCompatActivity {
     private CardView machu;
     private CardView maya;
     private CardView rome;
+
+    private TextView chinaText;
+    private TextView brazilText;
+    private TextView indiaText;
+    private TextView jordanText;
+    private TextView machuText;
+    private TextView romeText;
+    private TextView chichenText;
+
 
 
     @Override

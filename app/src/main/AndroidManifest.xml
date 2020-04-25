@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BadgesActivity"></activity>
+        <activity android:name=".quizFiles.WondersActivity"></activity>
+        <activity android:name=".quizFiles.QuizDatabseActivity" />
+        <activity android:name=".BadgesActivity" />
         <activity android:name=".NotesPage" />
         <activity android:name=".NotesDetailActivity" />
         <activity android:name=".CreateNote" />

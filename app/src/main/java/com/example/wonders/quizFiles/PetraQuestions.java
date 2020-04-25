@@ -15,7 +15,7 @@ public class PetraQuestions {
             {"3000BC", "4000BC", "6000BC", "7000BC"},
             {"Proximity to water sources", "Proximity to trade routes", "Proximity to major cities", "Proximity to fertile soil"},
             {"Northern Jordan", "Southern Jordan", "Western Jordan", " Eastern Jordan"},
-            {"20,000", "30,000", "40,000", "50,000"}
+            {"20000", "30000", "40000", "50000"}
 
 
     };

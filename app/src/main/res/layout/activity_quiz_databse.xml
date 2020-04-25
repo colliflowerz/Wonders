@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/darkmap"
+        android:alpha="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:text="question"
+        android:textAlignment="center"
+        android:textColor="@color/lightGrey"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:paddingStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="16dp"
+            android:text="option1"
+            android:textColor="@color/lightGrey" />
+
+        <RadioButton
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="16dp"
+            android:text="option2"
+            android:textColor="@color/lightGrey" />
+
+        <RadioButton
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="16dp"
+            android:text="option3"
+            android:textColor="@color/lightGrey" />
+
+        <RadioButton
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="16dp"
+            android:text="option4"
+            android:textColor="@color/lightGrey" />
+
+        <Button
+            android:id="@+id/nextQuestion"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:text="Answer"
+            android:background="@drawable/bg_btn_orange"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/correct"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="6dp"
+            android:paddingTop="25dp"
+            android:text="Answer 2 is correct!"
+            android:textColor="@color/lightGrey"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/userScore"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:paddingEnd="10dp"
+            android:text="user score"
+            android:textColor="@color/lightGrey"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/correctNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="16dp"
+            android:text="TextView"
+            android:textColor="@color/lightGrey"/>
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
