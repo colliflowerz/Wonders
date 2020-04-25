@@ -2,6 +2,7 @@ package com.example.wonders;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -24,6 +25,7 @@ public class InformationFragment extends Fragment {
     private ImageView imageView;
     private TextView title;
     private TextView description;
+    private TextView wiki;
     private Wonder wonder;
 
     public InformationFragment() {
@@ -50,6 +52,8 @@ public class InformationFragment extends Fragment {
         imageView = view.findViewById(R.id.wonder_cardimage);
         title = view.findViewById(R.id.wonder_name);
         description = view.findViewById(R.id.wonder_description);
+        wiki = view.findViewById(R.id.wiki_link);
+
 
         Intent intent = getActivity().getIntent();
         int position = intent.getIntExtra(ListOfWonders.EXTRA_MESSAGE, 0);
@@ -87,6 +91,23 @@ public class InformationFragment extends Fragment {
 
 // Add the request to the RequestQueue.
         requestQueue.add(stringRequest);
+
+        wiki.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (wonder.getName().equals("Christ the Redeemer")){
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/"+wonder.getName()+"%20(statue)"));
+                    startActivity(browserIntent);
+
+                }
+
+                else{
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/"+wonder.getName()));
+                startActivity(browserIntent);
+            }
+        }});
 
         return view;
     }

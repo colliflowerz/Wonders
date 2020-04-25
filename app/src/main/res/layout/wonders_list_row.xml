@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
-    android:clickable="true"
     android:background="#2c2e33"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/mediumGreenBlue"
     app:cardCornerRadius="12dp"
-    app:cardElevation="6dp"
-    app:cardBackgroundColor="#3c4047"
-    android:focusable="true">
+    app:cardElevation="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,8 +33,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="15dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:textSize="18sp"
             android:textColor="#dedede"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/location"
             app:layout_constraintStart_toEndOf="@+id/image"
             app:layout_constraintTop_toTopOf="@+id/image" />
@@ -44,8 +44,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="14sp"
             android:textColor="#dedede"
+            android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@+id/location"
             app:layout_constraintStart_toStartOf="@+id/name"
             app:layout_constraintTop_toBottomOf="@+id/name" />
@@ -56,8 +56,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textSize="14sp"
             android:textColor="#dedede"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

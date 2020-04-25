@@ -5,17 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
+    android:background="@color/mediumGreenBlue"
     android:clickable="true"
     android:focusable="true"
-    app:cardBackgroundColor="#3c4047"
-    android:background="#2c2e33"
+    app:cardBackgroundColor="@color/mediumGreenBlue"
     app:cardCornerRadius="16dp"
     app:cardElevation="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/name"
@@ -25,10 +24,10 @@
             android:layout_marginTop="24dp"
             android:text="Wonder Name"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="#FFFFFF"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="#FFFFFF"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/instagram"
