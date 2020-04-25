@@ -30,13 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".quizFiles.MachuQuizActivity" />
-        <activity android:name=".quizFiles.ChristQuizActivity" />
-        <activity android:name=".quizFiles.PetraQuizActivity" />
-        <activity android:name=".quizFiles.ChichenQuizActivity" />
-        <activity android:name=".quizFiles.ColosseumQuizActivity" />
-        <activity android:name=".quizFiles.TajMahalQuizActivity" />
-        <activity android:name=".quizFiles.GreatWallQuizActivity" />
         <activity android:name=".quizFiles.QuizTopics" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
