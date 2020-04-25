@@ -176,6 +176,8 @@ public class MachuQuizActivity extends AppCompatActivity {
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         SessionData.currentUser.setBadge5(true);
+        //Update the badge status in the database
+        SessionData.mUserDatabase.userDao().updateBadge5(SessionData.currentUser.getUsername());
         gameOverDialogue.show();
     }
 

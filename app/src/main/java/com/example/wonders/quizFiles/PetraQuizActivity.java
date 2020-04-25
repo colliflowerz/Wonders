@@ -175,6 +175,8 @@ public class PetraQuizActivity extends AppCompatActivity {
         });
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         SessionData.currentUser.setBadge4(true);
+        //Update the badge status in the database
+        SessionData.mUserDatabase.userDao().updateBadge4(SessionData.currentUser.getUsername());
         gameOverDialogue.show();
     }
 

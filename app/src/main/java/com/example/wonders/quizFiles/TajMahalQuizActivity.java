@@ -176,6 +176,8 @@ public class TajMahalQuizActivity extends AppCompatActivity {
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         SessionData.currentUser.setBadge2(true);
+        //Update the badge status in the database
+        SessionData.mUserDatabase.userDao().updateBadge2(SessionData.currentUser.getUsername());
         gameOverDialogue.show();
     }
 

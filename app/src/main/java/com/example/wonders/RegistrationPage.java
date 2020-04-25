@@ -43,7 +43,7 @@ public class RegistrationPage extends AppCompatActivity {
                     } else if (regPassword.getEditText().getText().toString().equals(regPasswordConfirm.getEditText().getText().toString()) == false) {
                         Toast.makeText(getApplicationContext(), "Password does not match!", Toast.LENGTH_SHORT).show();
                     } else {
-                        User user = new User(regUsername.getEditText().getText().toString(), regPasswordConfirm.getEditText().getText().toString());
+                        User user = new User(regUsername.getEditText().getText().toString(), regPasswordConfirm.getEditText().getText().toString(), false, false, false, false, false, false, false, false);
                         SessionData.mUserDatabase.userDao().insertOneUser(user);
                         Toast.makeText(getApplicationContext(), "Registration Successful!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), LoginScreen.class);

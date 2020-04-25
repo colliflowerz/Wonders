@@ -19,7 +19,7 @@ public class User {
     private boolean badge6;
     private boolean badge7;
 
-    @Ignore
+
     public User(@NonNull String username, String password, boolean badge1, boolean badge2, boolean badge3, boolean badge4, boolean badge5, boolean badge6, boolean badge7, boolean badge8) {
         this.username = username;
         this.password = password;
@@ -31,11 +31,6 @@ public class User {
         this.badge6 = badge6;
         this.badge7 = badge7;
         this.badge8 = badge8;
-    }
-
-    public User(@NonNull String username, String password) {
-        this.username = username;
-        this.password = password;
     }
 
     @NonNull

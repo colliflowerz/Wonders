@@ -176,6 +176,8 @@ public class ColosseumQuizActivity extends AppCompatActivity {
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         SessionData.currentUser.setBadge7(true);
+        //Update the badge status in the database
+        SessionData.mUserDatabase.userDao().updateBadge7(SessionData.currentUser.getUsername());
 
         gameOverDialogue.show();
     }

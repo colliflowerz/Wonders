@@ -176,6 +176,8 @@ public class ChristQuizActivity extends AppCompatActivity {
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         SessionData.currentUser.setBadge3(true);
+        //Update the badge status in the database
+        SessionData.mUserDatabase.userDao().updateBadge3(SessionData.currentUser.getUsername());
 
         gameOverDialogue.show();
     }
