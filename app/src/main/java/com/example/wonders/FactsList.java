@@ -19,8 +19,8 @@ public class FactsList {
             "India has a major problem with air pollution due to heavy traffic, so in order to protect the Taj Mahal from the harmful effects of pollution, there can be no cars and buses closer than 500 meters away from the entrance. ",
             "Approximately only 15% of Petra has been explored by archaeologists, which therefore means that there is still plenty to be revealed.",
             "The Mummy Returns, Indiana Jones and the Last Crusade are the most noteworthy movies that were filmed at Petra.",
-            "Due to the statue’s mountaintop position, it’s prone to lightning strikes and gets hit around three to six times a year.",
-            "The original design of the statue was different to what we see today. It was intended for Christ to be holding a globe in one hand and a cross in the other, rather than two open arms."};
+            "Due to Christ the Redeemer’s mountaintop position, it’s prone to lightning strikes and gets hit around three to six times a year.",
+            "The original design of Christ the Redeemer was different to what we see today. It was intended for Christ to be holding a globe in one hand and a cross in the other, rather than two open arms."};
 
     //getter to retrieve these facts
     public String getFact() {

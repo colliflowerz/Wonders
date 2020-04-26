@@ -32,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         //Open the welcome pop-up
-        openWelcomeDialog();
+        //openWelcomeDialog();
 
         //set bg
         bg1=findViewById(R.id.bg1);
@@ -105,7 +107,21 @@ public class MainActivity extends AppCompatActivity {
            }
        });
 
+       //check if first time going onto page and launch dialogue
+        // source: http://www.andreabaccega.com/blog/2012/04/12/android-how-to-execute-some-code-only-on-first-time-the-application-is-launched/
+
+        boolean firstrun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("firstrun", true);
+        if (firstrun){
+            openWelcomeDialog();
+
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                    .edit()
+                    .putBoolean("firstrun", false)
+                    .commit();
+        }
     }
+
+
 
     private void LaunchListOfWonders(){
         Intent intent = new Intent(this, ListOfWonders.class);

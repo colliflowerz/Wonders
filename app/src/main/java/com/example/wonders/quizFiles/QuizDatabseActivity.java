@@ -44,6 +44,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
     private TextView correctScore;
     public TextView currentScore;
     public ColorStateList textColorDefaultRb;
+    private ImageView backArrow;
 
     //items we need
 
@@ -68,6 +69,8 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
 
         gameOverDialogue = new Dialog(this);
+
+        backArrow = findViewById(R.id.backArrow);
 
 
         btn1 = findViewById(R.id.option1);
@@ -97,6 +100,18 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
         //counts amount of options objects
         questionCountTotal = options.size();
+
+        //initialising back arrow click
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent (QuizDatabseActivity.this, MainActivity.class);
+
+                startActivity(intent);
+
+            }
+        });
 
         //shows next question
         refreshQuestion();
