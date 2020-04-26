@@ -16,6 +16,8 @@ import com.luolc.emojirain.EmojiRainLayout;
 
 public class BadgesActivity extends AppCompatActivity {
 
+    //Here is the activity where all the badges are collected
+
     private ImageView china;
     private ImageView brazil;
     private ImageView india;
@@ -51,15 +53,12 @@ public class BadgesActivity extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(BadgesActivity.this, MainActivity.class);
-
                 startActivity(intent);
-
             }
         });
 
-
+        //If the status of the badge is true, it will be visible again and load an animation
         if (SessionData.currentUser.isBadge1()) {
             china.setVisibility(View.VISIBLE);
             animation = AnimationUtils.loadAnimation(this, R.anim.rotate);
@@ -122,6 +121,14 @@ public class BadgesActivity extends AppCompatActivity {
         }
     }
 
+
+    /*https://github.com/Luolc/EmojiRain
+    Year:2016
+    Author: Liangchen Luo
+     */
+    //Fun animation which rewards the student for completing all the quizzes
+    //All the badges will be raining down across the screen
+
     public void theWonderer(){
         mContainer = findViewById(R.id.group_emoji_container);
 
@@ -134,7 +141,6 @@ public class BadgesActivity extends AppCompatActivity {
         mContainer.addEmoji(R.drawable.picchu);
         mContainer.addEmoji(R.drawable.rome);
         mContainer.addEmoji(R.drawable.badge);
-
 
         // set emojis per flow, default 6
         mContainer.setPer(10);

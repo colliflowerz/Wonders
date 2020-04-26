@@ -21,8 +21,7 @@ public class CreateNoteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //ActionBar actionbar = getSupportActionBar();
-       // actionbar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
+
         setContentView(R.layout.activity_create_note);
 
         noteTitle = findViewById(R.id.title);
@@ -34,24 +33,23 @@ public class CreateNoteActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //gets you the contents of edit text
+                //Gets you the contents of edit text
                 String nTitle = noteTitle.getText().toString();
                 String nContent = noteContent.getText().toString();
                 int nId = 0;
-                if (NotesPageActivity.notesList.isEmpty()){
+                if (NotesPageActivity.notesList.isEmpty()) {
                     nId = 0;
-                }
-                else {
+                } else {
                     nId = NotesPageActivity.notesList.get(NotesPageActivity.notesList.size() - 1).getId() + 1;
                 }
 
-                //creating note object to insert into database
+                //Creating note object to insert into database
                 Notes object = new Notes(nId, nTitle, nContent);
                 NotesPageActivity.notesList.add(object);
 
                 Toast.makeText(CreateNoteActivity.this, "Note created!", Toast.LENGTH_SHORT).show();
 
-                //adds note to database and ends activity
+                //Adds note to database and ends activity
                 SessionData.mNotesDatabase.notesDao().insertOneNote(object);
                 NotesPageActivity.notesAdapter.notifyDataSetChanged();
                 finish();

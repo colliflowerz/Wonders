@@ -19,11 +19,9 @@ public class NotesDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      //  ActionBar actionbar = getSupportActionBar();
-       // actionbar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
         setContentView(R.layout.activity_notes_detail);
 
-        //displays relevant note with its contents when clicked from notes fragment
+        //Displays relevant note with its contents when clicked from notes fragment
         Intent intent = getIntent();
         int notesID = intent.getIntExtra("id", -1);
 

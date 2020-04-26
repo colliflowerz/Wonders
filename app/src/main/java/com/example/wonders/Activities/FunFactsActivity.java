@@ -14,6 +14,12 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.example.wonders.Data.FunFactsData;
 import com.example.wonders.R;
 
+/*
+ Source:https://github.com/treehouse/android-fun-facts-github/blob/master/app/src/main/java/com/teamtreehouse/funfacts/FunFactsActivity.java
+ Year: 2015
+ Author: Ben Deitch
+ */
+
 public class FunFactsActivity extends AppCompatActivity {
 
     private FunFactsData factsList = new FunFactsData();
@@ -31,42 +37,27 @@ public class FunFactsActivity extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent (FunFactsActivity.this, MainActivity.class);
-
+                Intent intent = new Intent(FunFactsActivity.this, MainActivity.class);
                 startActivity(intent);
-
             }
         });
 
         setTitle("Fun Facts");
 
-        //retrieving UI element IDs
-
+        //Retrieving UI element IDs
         factText = (TextView) findViewById(R.id.factTextView);
-        //final TextView factText = (TextView) findViewById(R.id.factTextView);
         final Button factButton = (Button) findViewById(R.id.showFactButton);
-        final ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout);
 
-        //intent from HomeLanding page
-        Intent intent2 = getIntent();
-
-        //retrieves fact once clicked
+        //Retrieves fact once clicked
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String fact = factsList.getFact();
                 factText.setText(fact);
-                //rotateAnimation();
-
             }
         };
         factButton.setOnClickListener(listener);
     }
-  /*   private void rotateAnimation() {
-        animation = AnimationUtils.loadAnimation(this, R.anim.rotate);
-        factText.startAnimation(animation);
-    } */
+
 }
 
-//reference: this code is derived from: https://github.com/treehouse/android-fun-facts-github/blob/master/app/src/main/java/com/teamtreehouse/funfacts/FunFactsActivity.java

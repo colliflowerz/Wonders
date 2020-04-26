@@ -18,6 +18,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
+//This activity contains the content that a student would use to learn about the Wonders
+
 public class DetailActivity extends AppCompatActivity {
     public static final String ARG_ITEM_ID = "item_id";
     private ArrayList<Wonder> wonders;
@@ -27,10 +29,9 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        //Grabs the Wonder selected from the ListOfWonderActivity and creates a fragment
         Intent intent = getIntent();
         int message = intent.getIntExtra("position", 0);
-
-
         int position = intent.getIntExtra(ListOfWondersActivity.EXTRA_MESSAGE, 0);
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
@@ -41,17 +42,18 @@ public class DetailActivity extends AppCompatActivity {
         transaction.replace(R.id.scrollView, fragment);
         transaction.commit();
 
+        //Creates a bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
     }
 
+    //Implements a listener which allows you to switch between the Information fragment and the Maps fragment
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
-
                     switch(item.getItemId()){
                         case R.id.nav_info:
                             selectedFragment = new InformationFragment();
@@ -60,9 +62,7 @@ public class DetailActivity extends AppCompatActivity {
                             selectedFragment = new MapsFragment();
                             break;
                     }
-
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-
                     return true;
                 }
             };

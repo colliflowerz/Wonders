@@ -13,6 +13,7 @@ import com.example.wonders.Wonder;
 
 import java.util.ArrayList;
 
+//This activity allows students to find out more about the Wonders
 
 public class DiscoverMoreActivity extends AppCompatActivity {
 
@@ -41,10 +42,7 @@ public class DiscoverMoreActivity extends AppCompatActivity {
         mAdapter = new DiscoverAdapter(this, Wonder.getWonders());
         mRecyclerView.setAdapter(mAdapter);
 
-
-
     }
-
 
 
 }

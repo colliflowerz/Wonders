@@ -19,6 +19,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
+//This activity allows users to swipe to remove notes
+
 public class NotesPageActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -36,7 +38,6 @@ public class NotesPageActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         notesAdapter = new NotesAdapter();
 
-
         notesList = SessionData.mNotesDatabase.notesDao().getAll();
         notesAdapter.setData((ArrayList<Notes>) notesList);
         recyclerView.setAdapter(notesAdapter);
@@ -51,7 +52,6 @@ public class NotesPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
 
     }

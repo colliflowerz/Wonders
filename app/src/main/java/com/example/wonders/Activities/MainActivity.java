@@ -25,37 +25,27 @@ public class MainActivity extends AppCompatActivity {
     private CardView badges;
     private ScrollView bg1;
     Dialog welcomeDialogue;
-    ImageView close, badge;
+    ImageView close;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        //Open the welcome pop-up
-        //openWelcomeDialog();
-
         //set bg
-        bg1=findViewById(R.id.bg1);
+        bg1 = findViewById(R.id.bg1);
 
-
-        //explore button
-
+        //Explore button to access the explore activity
         explore = findViewById(R.id.Card1);
         explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, ListOfWondersActivity.class);
-
                 startActivity(intent);
-
             }
-        }) ;
+        });
 
-        //fun facts button
+        //Fun facts button
         funfacts = findViewById(R.id.Card2);
         funfacts.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,55 +55,53 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //discover button
+        //Discover button
         discover = findViewById(R.id.discover);
         discover.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent3 = new Intent(MainActivity.this, DiscoverMoreActivity.class);
-
                 startActivity(intent3);
-
             }
-        }) ;
+        });
 
+        //Quiz button
         quiz = findViewById(R.id.quiz);
         quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent4 = new Intent(MainActivity.this, QuizTopics.class);
-
                 startActivity(intent4);
             }
         });
 
-       notes = findViewById(R.id.notes);
-       notes.setOnClickListener(new View.OnClickListener() {
+        //Notes button
+        notes = findViewById(R.id.notes);
+        notes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent5 = new Intent(MainActivity.this, NotesPageActivity.class);
                 startActivity(intent5);
             }
         });
 
-       badges = findViewById(R.id.badges);
-       badges.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent6 = new Intent(MainActivity.this, BadgesActivity.class);
-               startActivity(intent6);
-           }
-       });
+        //Badges button
+        badges = findViewById(R.id.badges);
+        badges.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent6 = new Intent(MainActivity.this, BadgesActivity.class);
+                startActivity(intent6);
+            }
+        });
 
-       //check if first time going onto page and launch dialogue
-        // source: http://www.andreabaccega.com/blog/2012/04/12/android-how-to-execute-some-code-only-on-first-time-the-application-is-launched/
-
+        //Check if first time going onto page and launch dialogue
+        // Source: http://www.andreabaccega.com/blog/2012/04/12/android-how-to-execute-some-code-only-on-first-time-the-application-is-launched/
+        // Year: 2012
+        // Author:  Andrea Baccega
         boolean firstrun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("firstrun", true);
-        if (firstrun){
+        if (firstrun) {
             openWelcomeDialog();
-
             getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                     .edit()
                     .putBoolean("firstrun", false)
@@ -121,15 +109,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
-    private void LaunchListOfWonders(){
-        Intent intent = new Intent(this, ListOfWondersActivity.class);
-        startActivity(intent);
-    }
-
-    private void openWelcomeDialog(){
-
+    //Creates a Dialog, sets an xml layout and shows the dialog
+    private void openWelcomeDialog() {
         welcomeDialogue = new Dialog(this);
         welcomeDialogue.setContentView(R.layout.welcome_dialog);
         close = (ImageView) welcomeDialogue.findViewById(R.id.close);
@@ -142,6 +123,4 @@ public class MainActivity extends AppCompatActivity {
         welcomeDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         welcomeDialogue.show();
     }
-
-
 }

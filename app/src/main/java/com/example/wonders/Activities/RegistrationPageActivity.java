@@ -15,9 +15,6 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class RegistrationPageActivity extends AppCompatActivity {
 
-    //public final static String NEW_USERNAME = "";
-    //public final static String NEW_PASSWORD = "";
-
     public static TextInputLayout regUsername;
     public TextInputLayout regPassword;
     public TextInputLayout regPasswordConfirm;
@@ -35,6 +32,9 @@ public class RegistrationPageActivity extends AppCompatActivity {
         regPasswordConfirm = findViewById(R.id.regPasswordConfirm);
         regBtn = findViewById(R.id.regBtn);
 
+        //Upon clicking the register button, it will check whether a user has entered a username, password and if the password is correct
+        //Else it will return with an error
+        //If successful, user will be registered into the database
         regBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +46,7 @@ public class RegistrationPageActivity extends AppCompatActivity {
                     } else if (regPassword.getEditText().getText().toString().equals(regPasswordConfirm.getEditText().getText().toString()) == false) {
                         Toast.makeText(getApplicationContext(), "Password does not match!", Toast.LENGTH_SHORT).show();
                     } else {
+        // To ensure that the user has not attained any badges as they register, badge status is set to false
                         User user = new User(regUsername.getEditText().getText().toString(), regPasswordConfirm.getEditText().getText().toString(), false, false, false, false, false, false, false, false);
                         SessionData.mUserDatabase.userDao().insertOneUser(user);
                         Toast.makeText(getApplicationContext(), "Registration Successful!", Toast.LENGTH_SHORT).show();
@@ -60,6 +61,7 @@ public class RegistrationPageActivity extends AppCompatActivity {
 
     }
 
+    //Check if the username already exists in the database
     public static Boolean usernameDoesntExist() {
         if (SessionData.mUserDatabase.userDao().returnUserByUserName(regUsername.getEditText().getText().toString()) != null) {
             return false;

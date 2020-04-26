@@ -17,8 +17,13 @@ import com.google.android.material.textfield.TextInputLayout;
 public class LoginScreenActivity extends AppCompatActivity {
     Button button;
 
-    //  https://www.journaldev.com/14748/android-textinputlayout-example
-    // This was used to learn how to use TextInputLayout
+    /*
+    This was used to learn how to use TextInputLayout
+    Source: https://www.journaldev.com/14748/android-textinputlayout-example
+    Year: 2017
+    Author:Anupam Chugh
+     */
+
     public TextInputLayout username;
     public TextInputLayout password;
     public Button login;
@@ -30,9 +35,10 @@ public class LoginScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-
+        //Creates database
         SessionData.createDB(this);
 
+        //Creating a sample user for testing
         SampleData.createSampleUsers();
 
         username = findViewById(R.id.username);
@@ -40,7 +46,10 @@ public class LoginScreenActivity extends AppCompatActivity {
         login = findViewById(R.id.loginBtn);
         rego = findViewById(R.id.regoBtn);
 
-
+        //Completes an authentication process when clicking login
+        //Shows Toasts if either the username, password is missing, if the user is not in the database
+        //and if the login credentials are incorrect
+        //If credentials are correct, start main activity
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +72,7 @@ public class LoginScreenActivity extends AppCompatActivity {
             }
         });
 
+        //Opens a new activity which allows users to register
         rego.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
