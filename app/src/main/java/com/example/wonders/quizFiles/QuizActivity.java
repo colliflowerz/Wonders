@@ -19,6 +19,9 @@ import com.example.wonders.R;
 
 import java.util.Random;
 
+
+//we are no longer using this class - our quiz is run on QuizDatabaseActivity
+
 public class QuizActivity extends AppCompatActivity {
 
 
@@ -58,6 +61,8 @@ public class QuizActivity extends AppCompatActivity {
         question = (TextView) findViewById(R.id.question);
 
         score.setText("Score: " + mScore+"/5");
+
+        //update question
 
         updateQuestion(r.nextInt(mQuestionsLength));
 
@@ -156,6 +161,8 @@ public class QuizActivity extends AppCompatActivity {
         mAnswer = mQuestions.getCorrectAnswer(num);
     }
 
+    //when user gets 5/5
+
     private void congratulations() {
 
         gameOverDialogue.setContentView(R.layout.congrats_popup_box);
@@ -173,6 +180,8 @@ public class QuizActivity extends AppCompatActivity {
         gameOverDialogue.show();
     }
 
+    //when user gets <5
+    //source: https://www.youtube.com/watch?v=67j1yIFa48s
     public void gameOver() {
         gameOverDialogue.setContentView(R.layout.quiz_popup_box);
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);

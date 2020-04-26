@@ -80,7 +80,7 @@ public class QuizBank {
 
     }
 
-        //questions, options, answers
+        //questions, options, answers for each wonder
 
         public static ArrayList<QuizOptions> getOptions(String wonders) {
             ArrayList<QuizOptions> options = new ArrayList<>();

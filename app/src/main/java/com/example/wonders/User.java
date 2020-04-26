@@ -9,6 +9,7 @@ import androidx.room.PrimaryKey;
 public class User {
     @PrimaryKey
     @NonNull
+    //initialising sections within db
     private String username;
     private String password;
     private boolean badge1;

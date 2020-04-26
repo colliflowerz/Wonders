@@ -165,6 +165,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
         }
     }
 
+    //check if question is correct
     private void markQuestion() {
         answered = true;
 
@@ -189,6 +190,8 @@ public class QuizDatabseActivity extends AppCompatActivity {
         showAnswer();
 
     }
+
+    //display correct answer in green, wrong answer in red
 
     private void showAnswer() {
         //sets radio button text as red
@@ -269,6 +272,9 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
 
     }
+
+    //when user gets 5/5
+    //source: https://www.youtube.com/watch?v=67j1yIFa48s
 
     private void congratulations() {
 
