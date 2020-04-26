@@ -85,11 +85,11 @@ public class QuizDatabseActivity extends AppCompatActivity {
         status = findViewById(R.id.correct);
         currentScore = findViewById(R.id.userScore);
         correctScore = findViewById(R.id.correctNumber);
+        currentScore.setText("0/5");
 
 
         //invisible labels
 
-        currentScore.setVisibility(View.INVISIBLE);
         status.setVisibility(View.INVISIBLE);
         correctScore.setVisibility(View.INVISIBLE);
 
@@ -106,7 +106,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent (QuizDatabseActivity.this, MainActivity.class);
+                Intent intent = new Intent (QuizDatabseActivity.this, QuizTopics.class);
 
                 startActivity(intent);
 
@@ -182,7 +182,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
             score++; //increase score by 1
             correctCount++; //increases number of correct questions by 1
             currentScore.setVisibility(View.VISIBLE);
-            currentScore.setText(String.valueOf(score));
+            currentScore.setText(String.valueOf(score)+"/5");
         }
 
 
