@@ -272,7 +272,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/ic_healing_black_24dp" />
+                        android:src="@drawable/achievement" />
 
                     <TextView
                         android:layout_width="wrap_content"

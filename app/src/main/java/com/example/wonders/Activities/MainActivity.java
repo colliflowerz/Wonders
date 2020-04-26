@@ -107,6 +107,10 @@ public class MainActivity extends AppCompatActivity {
                     .putBoolean("firstrun", false)
                     .commit();
         }
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .edit()
+                .putBoolean("firstrun", false)
+                .commit();
     }
 
     //Creates a Dialog, sets an xml layout and shows the dialog
