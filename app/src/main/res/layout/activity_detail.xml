@@ -30,9 +30,9 @@
         android:elevation="10dp"
         app:itemRippleColor="@color/lightGrey"
         app:itemIconTint="@drawable/tab_color"
-        app:itemBackground="@color/darkGrey"
+        app:itemBackground="@color/darkGreenBlue"
         app:menu="@menu/bottom_navigation"
         app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
-        android:background="@color/darkGrey"/>
+        android:background="@color/darkGreenBlue"/>
 
 </RelativeLayout>

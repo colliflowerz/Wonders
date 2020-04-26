@@ -9,6 +9,7 @@ import androidx.room.PrimaryKey;
 public class User {
     @PrimaryKey
     @NonNull
+    //initialising sections within db
     private String username;
     private String password;
     //If a user completes a quiz, it will change the status of the badges to true

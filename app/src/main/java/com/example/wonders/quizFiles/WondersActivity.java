@@ -8,6 +8,9 @@ import android.os.Bundle;
 
 import com.example.wonders.R;
 
+//unused class
+//created to initialise name but now is done in QuizTopics
+
 public class WondersActivity extends AppCompatActivity {
 
     public static String name;

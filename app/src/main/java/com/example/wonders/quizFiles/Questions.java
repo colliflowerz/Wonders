@@ -1,6 +1,12 @@
 package com.example.wonders.quizFiles;
 
+
+//we are not using this class anymore
+//source: https://www.youtube.com/watch?v=JA9s_Fntg_4&t=1255s
+
 public class Questions {
+
+    //adding questions
 
     public String mQuestions[] ={
             "Which of these 7 New Wonders of the world is the oldest?",
@@ -13,6 +19,8 @@ public class Questions {
             "Which of these 7 New Wonders of the world is located in Italy?",
             "Which of these 7 New Wonders of the world is located in Jordan?"
     };
+
+    //adding options
 
     private String mChoices [][] ={
             {"Petra", "The Great Wall of China", "Machu Picchu", "Christ the Redeemer"},
@@ -27,9 +35,13 @@ public class Questions {
 
     };
 
+    //answers
+
     private String mCorrectAnswers [] = {
             "Petra", "Christ the Redeemer", "Machu Picchu", "Taj Mahal", "Christ the Redeemer", "The Great Wall of China", "Chinchen Itza", "Colosseum", "Petra"
     };
+
+    //methods
 
     public String getQuestion (int a){
         String question = mQuestions [a];

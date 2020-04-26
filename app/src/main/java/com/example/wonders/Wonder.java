@@ -17,6 +17,9 @@ public class Wonder {
     public Wonder() {
 
     }
+
+    //initialising
+
     public Wonder(String name, String location, String year, int image, Double latitude, Double longitude, String desc) {
         this.name = name;
         this.location = location;
@@ -81,6 +84,7 @@ public class Wonder {
 
     public void setDesc(String desc) {this.desc=desc;}
 
+    //adding values to the Wonder list
     public static ArrayList<Wonder> getWonders() {
         ArrayList<Wonder> wonders = new ArrayList<>();
 
@@ -97,4 +101,3 @@ public class Wonder {
 
 
 }
-

@@ -12,6 +12,7 @@ import com.example.wonders.R;
 
 public class QuizTopics extends AppCompatActivity {
 
+    //initialise elements
     private CardView china;
     private CardView brazil;
     private CardView india;
@@ -37,6 +38,9 @@ public class QuizTopics extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_topics);
+
+        //clickers for topic selection
+        //initialise names
 
         china = findViewById(R.id.card1);
         chinaText = findViewById(R.id.chinaText);
