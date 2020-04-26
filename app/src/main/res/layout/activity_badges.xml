@@ -1,399 +1,408 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<com.luolc.emojirain.EmojiRainLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bg2"
+    android:id="@+id/group_emoji_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkGreenBlue"
-    tools:context=".Fragments.LandingPageFragment">
+    app:dropDuration="2400"
+    app:dropFrequency="500"
+    app:duration="7200"
+    app:per="10"
+    tools:context="com.example.wonders.Activities.BadgesActivity">
 
-
-
-
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/bg2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/darkmap"
-        android:orientation="vertical">
+        android:background="@color/darkGreenBlue"
+        tools:context=".Fragments.LandingPageFragment">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginRight="20dp">
+            android:layout_height="match_parent"
+            android:background="@drawable/darkmap"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/backArrow"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_arrow_back_black_24dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
 
 
-            <TextView
-                android:id="@+id/textLandingBadges"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textLandingBadges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:text="My Badges"
+                    android:textColor="#FFFFFF"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textLandingBadges"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginTop="4dp"
+
+                    android:text="Conquer all 7 Wonders to become the Wonderer"
+                    android:textAlignment="textEnd"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/globepng"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="My Badges"
-                android:layout_marginLeft="200dp"
-                android:textColor="#FFFFFF"
-                android:textSize="32sp" />
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:rowCount="3">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textLandingBadges"
-                android:layout_marginLeft="90dp"
-                android:layout_marginTop="4dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/badgeCard1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/darkGreenBlue"
+                    app:cardCornerRadius="12dp">
 
-                android:text="Conquer all 7 Wonders to become the Wonderer"
-                android:textAlignment="textEnd"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
-
-
-            <ImageView
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:visibility="invisible"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/globepng" />
-
-
-        </RelativeLayout>
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:rowCount="3">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/badgeCard1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/darkGreenBlue"
-                app:cardCornerRadius="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/badgeCard1Image"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:visibility="invisible"
-                        android:src="@drawable/china" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="The Great Wall"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/badgeCard1Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/china"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="The Great Wall"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/badgeCard2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/darkGreenBlue"
-                app:cardCornerRadius="12dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/badgeCard2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/darkGreenBlue"
+                    app:cardCornerRadius="12dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/badgeCard2Image"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:visibility="invisible"
-                        android:src="@drawable/india" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Taj Mahal"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/badgeCard2Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/india"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Taj Mahal"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/badgeCard3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/darkGreenBlue"
-                app:cardCornerRadius="12dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/badgeCard3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/darkGreenBlue"
+                    app:cardCornerRadius="12dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/badgeCard3Image"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:visibility="invisible"
-                        android:src="@drawable/brazil" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="12dp"
-                        android:text="Christ the Redeemer"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/badgeCard3Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/brazil"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:text="Christ the Redeemer"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/badgeCard4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/badgeCard4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="20dp"
 
-                app:cardBackgroundColor="@color/darkGreenBlue"
-                app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/darkGreenBlue"
+                    app:cardCornerRadius="12dp"
 
-                >
+                    >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/badgeCard4Image"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:visibility="invisible"
-                        android:src="@drawable/jordan" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Petra"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                </LinearLayout>
+                        <ImageView
+                            android:id="@+id/badgeCard4Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/jordan"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Petra"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/badgeCard5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/darkGreenBlue"
-                app:cardCornerRadius="12dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/badgeCard5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/darkGreenBlue"
+                    app:cardCornerRadius="12dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/badgeCard5Image"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:visibility="invisible"
-                        android:src="@drawable/picchu" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Machu Picchu"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                </LinearLayout>
+                        <ImageView
+                            android:id="@+id/badgeCard5Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/picchu"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Machu Picchu"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/badgeCard6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/darkGreenBlue"
-                app:cardCornerRadius="12dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/badgeCard6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/darkGreenBlue"
+                    app:cardCornerRadius="12dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/badgeCard6Image"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:visibility="invisible"
-                        android:src="@drawable/maya" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Chichen Itza"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                </LinearLayout>
+                        <ImageView
+                            android:id="@+id/badgeCard6Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/maya"
+                            android:visibility="invisible" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Chichen Itza"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/badgeCard7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/darkGreenBlue"
-                app:cardCornerRadius="12dp">
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/badgeCard7Image"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:visibility="invisible"
-                        android:src="@drawable/rome" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/badgeCard7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/darkGreenBlue"
+                    app:cardCornerRadius="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Colosseum"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                </LinearLayout>
+                        <ImageView
+                            android:id="@+id/badgeCard7Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/rome"
+                            android:visibility="invisible" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Colosseum"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/badgeCard8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/darkGreenBlue"
-                app:cardCornerRadius="12dp"
+                    </LinearLayout>
 
-                >
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/badgeCard8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/darkGreenBlue"
+                    app:cardCornerRadius="12dp"
 
-                    <ImageView
-                        android:id="@+id/badgeCard8Image"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:visibility="invisible"
-                        android:src="@drawable/badge" />
+                    >
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="The Wonderer"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                </LinearLayout>
+                        <ImageView
+                            android:id="@+id/badgeCard8Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/badge"
+                            android:visibility="invisible" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="The Wonderer"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
 
-        </GridLayout>
+                    </LinearLayout>
 
-    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-    <!-- TODO: Update blank fragment layout -->
+            </GridLayout>
+
+        </LinearLayout>
 
 
-</ScrollView>
+    </ScrollView>
+
+</com.luolc.emojirain.EmojiRainLayout>

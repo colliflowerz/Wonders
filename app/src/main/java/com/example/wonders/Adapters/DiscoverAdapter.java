@@ -52,8 +52,7 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
             google = v.findViewById(R.id.google);
             google.setTag(this);
 
-            desc= v.findViewById(R.id.desc);
-
+            desc = v.findViewById(R.id.desc);
 
 
         }
@@ -83,34 +82,34 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
         holder.instagram.setClickable(true);
         holder.youtube.setClickable(true);
         holder.youtube.setTag(wonder);
-        holder.youtube.setOnClickListener(new View.OnClickListener(){
+        holder.youtube.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/results?search_query=" + mWonders.get(position).getName().replaceAll("\\s","+")));
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/results?search_query=" + mWonders.get(position).getName().replaceAll("\\s", "+")));
                 mContext.startActivity(browserIntent);
             }
         });
 
 
-        holder.google.setOnClickListener(new View.OnClickListener(){
+        holder.google.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=" + mWonders.get(position).getName()));
                 mContext.startActivity(browserIntent);
 
             }
 
         });
-        holder.instagram.setOnClickListener(new View.OnClickListener(){
+        holder.instagram.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/explore/tags/" + mWonders.get(position).getName().replaceAll("\\s","")));
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/explore/tags/" + mWonders.get(position).getName().replaceAll("\\s", "")));
                 mContext.startActivity(browserIntent);
             }
 
         });
 
-            }
+    }
 
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -118,7 +117,6 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
     public int getItemCount() {
         return mWonders.size();
     }
-
 
 
 }
