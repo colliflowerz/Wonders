@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:padding="8dp"
         android:text="question"
@@ -49,36 +49,44 @@
         <RadioButton
             android:id="@+id/option1"
             android:layout_width="match_parent"
+            android:layout_gravity="center"
             android:layout_height="60dp"
             android:padding="16dp"
             android:text="option1"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/lightGrey"
             android:textSize="16sp"/>
 
         <RadioButton
             android:id="@+id/option2"
             android:layout_width="match_parent"
+            android:layout_gravity="center"
             android:layout_height="60dp"
             android:padding="16dp"
             android:text="option2"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/lightGrey"
             android:textSize="16sp"/>
 
         <RadioButton
             android:id="@+id/option3"
             android:layout_width="match_parent"
+            android:layout_gravity="center"
             android:layout_height="60dp"
             android:padding="16dp"
             android:text="option3"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/lightGrey"
             android:textSize="16sp"/>
 
         <RadioButton
             android:id="@+id/option4"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:padding="16dp"
             android:text="option4"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/lightGrey"
             android:textSize="16sp"/>
 
@@ -110,7 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="86dp"
             android:gravity="center"
-            android:paddingTop="30dp"
+            android:paddingTop="20dp"
             android:paddingEnd="10dp"
             android:text="user score"
             android:textAlignment="center"
