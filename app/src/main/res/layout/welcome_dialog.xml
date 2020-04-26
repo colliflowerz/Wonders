@@ -110,6 +110,17 @@
                     android:textColor="#dedede"
                     android:textSize="18sp" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Note for the Google Maps API to work you must add Google Play Services in your SDK tools. For more Info, please refer to report"
+                    android:textAlignment="center"
+                    android:textColor="#dedede"
+                    android:textSize="14sp" />
+
 
             </LinearLayout>
 
