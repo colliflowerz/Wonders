@@ -43,9 +43,9 @@ public class BadgesActivity extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BadgesActivity.this, MainActivity.class);
 
-                startActivity(intent);
+                finish();
+
             }
         });
 
