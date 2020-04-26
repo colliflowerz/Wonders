@@ -24,6 +24,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsFragment extends Fragment {
     private Wonder wonder;
 
+    //Used in the Async task below where it loads the map and sets the markers in the background
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
         /**
@@ -72,7 +73,6 @@ public class MapsFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_maps, container, false);
 
-
     }
 
     @Override
@@ -81,6 +81,7 @@ public class MapsFragment extends Fragment {
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         if (mapFragment != null) {
+            //Callback used here
             mapFragment.getMapAsync(callback);
         }
     }
