@@ -18,12 +18,12 @@
         android:theme="@style/AppTheme">
         <activity android:name=".quizFiles.WondersActivity"></activity>
         <activity android:name=".quizFiles.QuizDatabseActivity" />
-        <activity android:name=".BadgesActivity" />
-        <activity android:name=".NotesPage" />
-        <activity android:name=".NotesDetailActivity" />
-        <activity android:name=".CreateNote" />
-        <activity android:name=".RegistrationPage" />
-        <activity android:name=".LoginScreen">
+        <activity android:name=".Activities.BadgesActivity" />
+        <activity android:name=".Activities.NotesPageActivity" />
+        <activity android:name=".Activities.NotesDetailActivity" />
+        <activity android:name=".Activities.CreateNoteActivity" />
+        <activity android:name=".Activities.RegistrationPageActivity" />
+        <activity android:name=".Activities.LoginScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,12 +43,12 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".DiscoverList" />
-        <activity android:name=".FunFacts" />
-        <activity android:name=".ListOfWonders" />
+        <activity android:name=".Activities.DiscoverMoreActivity" />
+        <activity android:name=".Activities.FunFactsActivity" />
+        <activity android:name=".Activities.ListOfWondersActivity" />
         <activity android:name=".quizFiles.QuizActivity" />
-        <activity android:name=".DetailActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Activities.DetailActivity" />
+        <activity android:name=".Activities.MainActivity" />
     </application>
 
 </manifest>

@@ -1,19 +1,20 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.se.omapi.Session;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.wonders.R;
+import com.example.wonders.Data.SampleData;
+import com.example.wonders.Data.SessionData;
+import com.example.wonders.User;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class LoginScreen extends AppCompatActivity {
+public class LoginScreenActivity extends AppCompatActivity {
     Button button;
 
     //  https://www.journaldev.com/14748/android-textinputlayout-example
@@ -52,7 +53,7 @@ public class LoginScreen extends AppCompatActivity {
                 } else if (user == null) {
                     Toast.makeText(getApplicationContext(), "User does not exist!", Toast.LENGTH_LONG).show();
                 } else if (password.getEditText().getText().toString().equals(user.getPassword().toString())) {
-                    startActivity(new Intent(LoginScreen.this, MainActivity.class));
+                    startActivity(new Intent(LoginScreenActivity.this, MainActivity.class));
                     SessionData.currentUser = user;
                     Toast.makeText(getApplicationContext(), "Your details are correct!", Toast.LENGTH_LONG).show();
                     finish();
@@ -65,7 +66,7 @@ public class LoginScreen extends AppCompatActivity {
         rego.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginScreen.this, RegistrationPage.class);
+                Intent intent = new Intent(LoginScreenActivity.this, RegistrationPageActivity.class);
                 startActivity(intent);
             }
         });

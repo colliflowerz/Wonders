@@ -1,10 +1,12 @@
-package com.example.wonders;
+package com.example.wonders.DAOs;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+
+import com.example.wonders.Notes;
 
 import java.util.List;
 

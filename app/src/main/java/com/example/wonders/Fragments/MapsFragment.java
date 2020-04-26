@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.Fragments;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.wonders.Activities.ListOfWondersActivity;
+import com.example.wonders.R;
+import com.example.wonders.Wonder;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -35,7 +38,7 @@ public class MapsFragment extends Fragment {
         @Override
         public void onMapReady(GoogleMap googleMap) {
             Intent intent = getActivity().getIntent();
-            int position = intent.getIntExtra(ListOfWonders.EXTRA_MESSAGE, 0);
+            int position = intent.getIntExtra(ListOfWondersActivity.EXTRA_MESSAGE, 0);
             wonder = Wonder.getWonders().get(position);
 
             LatLng wonderCood = new LatLng(wonder.getLatitude(), wonder.getLongitude());

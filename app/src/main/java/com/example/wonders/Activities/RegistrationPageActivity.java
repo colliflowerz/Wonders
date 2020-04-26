@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,9 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.wonders.R;
+import com.example.wonders.Data.SessionData;
+import com.example.wonders.User;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class RegistrationPage extends AppCompatActivity {
+public class RegistrationPageActivity extends AppCompatActivity {
 
     //public final static String NEW_USERNAME = "";
     //public final static String NEW_PASSWORD = "";
@@ -46,7 +49,7 @@ public class RegistrationPage extends AppCompatActivity {
                         User user = new User(regUsername.getEditText().getText().toString(), regPasswordConfirm.getEditText().getText().toString(), false, false, false, false, false, false, false, false);
                         SessionData.mUserDatabase.userDao().insertOneUser(user);
                         Toast.makeText(getApplicationContext(), "Registration Successful!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), LoginScreen.class);
+                        Intent intent = new Intent(getApplicationContext(), LoginScreenActivity.class);
                         startActivity(intent);
                     }
                 } else {

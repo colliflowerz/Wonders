@@ -1,9 +1,8 @@
-package com.example.wonders;
+package com.example.wonders.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.wonders.R;
+import com.example.wonders.Wonder;
 
 import java.util.ArrayList;
 
@@ -21,7 +23,7 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
     Context mContext;
 
 
-    DiscoverAdapter(Context context, ArrayList<Wonder> wonders) {
+    public DiscoverAdapter(Context context, ArrayList<Wonder> wonders) {
         mWonders = wonders;
         mContext = context;
     }
@@ -102,7 +104,7 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
         holder.instagram.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/explore/tags/" + mWonders.get(position).getName().replaceAll("\\s","+")));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/explore/tags/" + mWonders.get(position).getName().replaceAll("\\s","")));
                 mContext.startActivity(browserIntent);
             }
 

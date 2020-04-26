@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import android.widget.ScrollView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.wonders.quizFiles.QuizDatabseActivity;
+import com.example.wonders.R;
 import com.example.wonders.quizFiles.QuizTopics;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, ListOfWonders.class);
+                Intent intent = new Intent(MainActivity.this, ListOfWondersActivity.class);
 
                 startActivity(intent);
 
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         funfacts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(MainActivity.this, FunFacts.class);
+                Intent intent2 = new Intent(MainActivity.this, FunFactsActivity.class);
                 startActivity(intent2);
             }
         });
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent3 = new Intent(MainActivity.this, DiscoverList.class);
+                Intent intent3 = new Intent(MainActivity.this, DiscoverMoreActivity.class);
 
                 startActivity(intent3);
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent5 = new Intent(MainActivity.this, NotesPage.class);
+                Intent intent5 = new Intent(MainActivity.this, NotesPageActivity.class);
                 startActivity(intent5);
             }
         });
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void LaunchListOfWonders(){
-        Intent intent = new Intent(this, ListOfWonders.class);
+        Intent intent = new Intent(this, ListOfWondersActivity.class);
         startActivity(intent);
     }
 

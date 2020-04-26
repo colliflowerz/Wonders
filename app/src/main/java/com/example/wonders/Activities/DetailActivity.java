@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,8 +9,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 
+import com.example.wonders.Fragments.InformationFragment;
+import com.example.wonders.Fragments.MapsFragment;
+import com.example.wonders.R;
+import com.example.wonders.Wonder;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -28,12 +31,12 @@ public class DetailActivity extends AppCompatActivity {
         int message = intent.getIntExtra("position", 0);
 
 
-        int position = intent.getIntExtra(ListOfWonders.EXTRA_MESSAGE, 0);
+        int position = intent.getIntExtra(ListOfWondersActivity.EXTRA_MESSAGE, 0);
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         Fragment fragment = new InformationFragment();
         Bundle args = new Bundle();
-        args.putInt(ListOfWonders.EXTRA_MESSAGE, position);
+        args.putInt(ListOfWondersActivity.EXTRA_MESSAGE, position);
         fragment.setArguments(args);
         transaction.replace(R.id.scrollView, fragment);
         transaction.commit();

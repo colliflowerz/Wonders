@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 
 import android.content.Intent;
 import android.widget.TextView;
+
+import com.example.wonders.Notes;
+import com.example.wonders.R;
 
 public class NotesDetailActivity extends AppCompatActivity {
 
@@ -33,6 +36,6 @@ public class NotesDetailActivity extends AppCompatActivity {
     }
 
     public static Notes getNotesById(int notesID) {
-        return NotesPage.notesList.get(notesID);
+        return NotesPageActivity.notesList.get(notesID);
     }
 }

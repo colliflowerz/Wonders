@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#2c2e33"
-    tools:context=".LandingPage">
+    tools:context=".Fragments.LandingPageFragment">
 
     <LinearLayout
         android:orientation="vertical"

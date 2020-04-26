@@ -1,19 +1,18 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.wonders.SessionData;
-import com.example.wonders.R;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.wonders.Notes;
+import com.example.wonders.R;
+import com.example.wonders.Data.SessionData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class CreateNote extends AppCompatActivity {
+public class CreateNoteActivity extends AppCompatActivity {
 
     public EditText noteTitle;
     public EditText noteContent;
@@ -39,22 +38,22 @@ public class CreateNote extends AppCompatActivity {
                 String nTitle = noteTitle.getText().toString();
                 String nContent = noteContent.getText().toString();
                 int nId = 0;
-                if (NotesPage.notesList.isEmpty()){
+                if (NotesPageActivity.notesList.isEmpty()){
                     nId = 0;
                 }
                 else {
-                    nId = NotesPage.notesList.get(NotesPage.notesList.size() - 1).getId() + 1;
+                    nId = NotesPageActivity.notesList.get(NotesPageActivity.notesList.size() - 1).getId() + 1;
                 }
 
                 //creating note object to insert into database
                 Notes object = new Notes(nId, nTitle, nContent);
-                NotesPage.notesList.add(object);
+                NotesPageActivity.notesList.add(object);
 
-                Toast.makeText(CreateNote.this, "Note created!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CreateNoteActivity.this, "Note created!", Toast.LENGTH_SHORT).show();
 
                 //adds note to database and ends activity
                 SessionData.mNotesDatabase.notesDao().insertOneNote(object);
-                NotesPage.notesAdapter.notifyDataSetChanged();
+                NotesPageActivity.notesAdapter.notifyDataSetChanged();
                 finish();
             }
 

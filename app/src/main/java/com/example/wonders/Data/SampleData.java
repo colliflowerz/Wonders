@@ -1,4 +1,6 @@
-package com.example.wonders;
+package com.example.wonders.Data;
+
+import com.example.wonders.User;
 
 import java.util.ArrayList;
 import java.util.List;

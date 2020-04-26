@@ -1,7 +1,6 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +8,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.TextView;
+
+import com.example.wonders.R;
+import com.example.wonders.Data.SessionData;
 
 public class BadgesActivity extends AppCompatActivity {
 

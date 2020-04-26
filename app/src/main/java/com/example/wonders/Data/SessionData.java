@@ -1,8 +1,12 @@
-package com.example.wonders;
+package com.example.wonders.Data;
 
 import android.content.Context;
 
 import androidx.room.Room;
+
+import com.example.wonders.Databases.NotesDatabase;
+import com.example.wonders.User;
+import com.example.wonders.Databases.UserDatabase;
 
 public class SessionData {
 

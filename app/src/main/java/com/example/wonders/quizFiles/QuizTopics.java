@@ -4,14 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.wonders.ListOfWonders;
-import com.example.wonders.MainActivity;
 import com.example.wonders.R;
 
 public class QuizTopics extends AppCompatActivity {

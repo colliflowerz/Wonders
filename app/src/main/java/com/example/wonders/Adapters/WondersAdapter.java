@@ -1,8 +1,5 @@
-package com.example.wonders;
+package com.example.wonders.Adapters;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wonders.R;
+import com.example.wonders.Wonder;
+
 import java.util.ArrayList;
 
 
@@ -18,7 +18,7 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
     private ArrayList<Wonder> mWonders;
     private RecyclerViewClickListener mListener;
 
-    WondersAdapter(ArrayList<Wonder> wonders, RecyclerViewClickListener listener) {
+    public WondersAdapter(ArrayList<Wonder> wonders, RecyclerViewClickListener listener) {
         mWonders = wonders;
         mListener = listener;
     }

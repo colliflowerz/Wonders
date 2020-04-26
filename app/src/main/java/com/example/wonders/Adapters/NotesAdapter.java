@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+import com.example.wonders.Activities.NotesDetailActivity;
+import com.example.wonders.Notes;
+import com.example.wonders.R;
 
 import java.util.ArrayList;
 

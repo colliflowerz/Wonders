@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,12 +10,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.wonders.Adapters.NotesAdapter;
+import com.example.wonders.Data.SessionData;
+import com.example.wonders.Notes;
+import com.example.wonders.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotesPage extends AppCompatActivity {
+public class NotesPageActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     public static NotesAdapter notesAdapter;
@@ -43,7 +47,7 @@ public class NotesPage extends AppCompatActivity {
         createNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NotesPage.this, CreateNote.class);
+                Intent intent = new Intent(NotesPageActivity.this, CreateNoteActivity.class);
                 startActivity(intent);
             }
         });

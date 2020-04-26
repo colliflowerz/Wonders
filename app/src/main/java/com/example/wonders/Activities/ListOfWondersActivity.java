@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,8 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.wonders.R;
+import com.example.wonders.Wonder;
+import com.example.wonders.Adapters.WondersAdapter;
 
-public class ListOfWonders extends AppCompatActivity {
+
+public class ListOfWondersActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "hello there";
 

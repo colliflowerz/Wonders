@@ -1,4 +1,4 @@
-package com.example.wonders;
+package com.example.wonders.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,6 +19,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.wonders.Activities.ListOfWondersActivity;
+import com.example.wonders.R;
+import com.example.wonders.Wonder;
 
 public class InformationFragment extends Fragment {
 
@@ -56,7 +59,7 @@ public class InformationFragment extends Fragment {
 
 
         Intent intent = getActivity().getIntent();
-        int position = intent.getIntExtra(ListOfWonders.EXTRA_MESSAGE, 0);
+        int position = intent.getIntExtra(ListOfWondersActivity.EXTRA_MESSAGE, 0);
         wonder = Wonder.getWonders().get(position);
 
         title.setText(wonder.getName());

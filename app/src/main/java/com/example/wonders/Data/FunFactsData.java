@@ -1,8 +1,8 @@
-package com.example.wonders;
+package com.example.wonders.Data;
 
 import java.util.Random;
 
-public class FactsList {
+public class FunFactsData {
 
 
     // this array stores all the facts that are in the "fun fact" functionality of the app

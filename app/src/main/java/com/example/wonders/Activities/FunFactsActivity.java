@@ -1,21 +1,22 @@
-package com.example.wonders;
+package com.example.wonders.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextClock;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-public class FunFacts extends AppCompatActivity {
+import com.example.wonders.Data.FunFactsData;
+import com.example.wonders.R;
 
-    private FactsList factsList = new FactsList();
+public class FunFactsActivity extends AppCompatActivity {
+
+    private FunFactsData factsList = new FunFactsData();
     Animation animation;
     TextView factText;
     private ImageView backArrow;
@@ -31,7 +32,7 @@ public class FunFacts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent (FunFacts.this, MainActivity.class);
+                Intent intent = new Intent (FunFactsActivity.this, MainActivity.class);
 
                 startActivity(intent);
 

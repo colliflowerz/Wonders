@@ -18,10 +18,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.wonders.BadgesActivity;
-import com.example.wonders.MainActivity;
+import com.example.wonders.Activities.BadgesActivity;
+import com.example.wonders.Activities.MainActivity;
 import com.example.wonders.R;
-import com.example.wonders.SessionData;
+import com.example.wonders.Data.SessionData;
 
 import java.util.ArrayList;
 
