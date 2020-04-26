@@ -81,7 +81,7 @@
                 android:paddingTop="10dp"
                 android:paddingEnd="20dp"
                 android:paddingRight="20dp"
-                android:paddingBottom="30dp"
+                android:paddingBottom="120dp"
                 android:text="Continue on Wikipedia"
                 android:textColor="@color/lightGrey"
                 android:textColorLink="@color/lightGrey"
