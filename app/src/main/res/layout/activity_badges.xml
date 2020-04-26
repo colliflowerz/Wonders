@@ -50,6 +50,7 @@
                     android:textSize="32sp" />
 
                 <TextView
+                    android:id="@+id/textLanding"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textLandingBadges"

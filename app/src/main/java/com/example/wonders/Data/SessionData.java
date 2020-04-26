@@ -11,7 +11,7 @@ import com.example.wonders.Databases.UserDatabase;
 public class SessionData {
 
     public static UserDatabase mUserDatabase;
-    public static User currentUser = new User("collin", "collin", false, true,true,false,false,false,false,false);
+    public static User currentUser = new User("collin", "collin", true, true,true,true,true,true,true,true);
     public static NotesDatabase mNotesDatabase;
 
 
