@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -75,7 +76,8 @@ public class InformationFragment extends Fragment {
         Context context = getContext();
         final RequestQueue requestQueue = Volley.newRequestQueue(context);
 
-        //
+        //Grabs the string from the WikiAPI
+        //With the string containing a lot of unicode, we further refined the string to remove these
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -83,8 +85,13 @@ public class InformationFragment extends Fragment {
                         String string = (response.substring(response.lastIndexOf("extract") + 10, response.length() - 5));
                         string = string.replace("\\n", "\n\n");
                         string = string.replaceAll("\\(.*?\\)", "");
-                        // Display
-                        description.setText(string);
+                        string = string.replaceAll("\u00fa", "u");
+                        string = string.replaceAll("\u00e1", "a");
+                        string = string.replaceAll("\u00ed", "i");
+                        string = string.replaceAll("\u00e1", "a");
+
+                        // Display string
+                        description.setText(Html.fromHtml(string));
                     }
                 }, new Response.ErrorListener() {
 
@@ -100,13 +107,11 @@ public class InformationFragment extends Fragment {
         wiki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (wonder.getName().equals("Christ the Redeemer")) {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/" + wonder.getName() + "%20(statue)"));
                     startActivity(browserIntent);
 
                 } else {
-
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/" + wonder.getName()));
                     startActivity(browserIntent);
                 }

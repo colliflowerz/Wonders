@@ -10,11 +10,12 @@ import android.widget.ImageView;
 public class Startup extends Application {
 
     Dialog welcomeDialogue;
-    ImageView close, badge;
+    ImageView close;
     @Override
     public void onCreate() {
         super.onCreate();
 
+        //Creates and opens the Dialog
         welcomeDialogue = new Dialog(this);
         welcomeDialogue.setContentView(R.layout.welcome_dialog);
         close = (ImageView) welcomeDialogue.findViewById(R.id.close);

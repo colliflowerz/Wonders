@@ -11,6 +11,7 @@ public class User {
     @NonNull
     private String username;
     private String password;
+    //If a user completes a quiz, it will change the status of the badges to true
     private boolean badge1;
     private boolean badge2;
     private boolean badge3;
@@ -19,7 +20,7 @@ public class User {
     private boolean badge6;
     private boolean badge7;
 
-
+    //Constructor
     public User(@NonNull String username, String password, boolean badge1, boolean badge2, boolean badge3, boolean badge4, boolean badge5, boolean badge6, boolean badge7, boolean badge8) {
         this.username = username;
         this.password = password;
@@ -33,6 +34,7 @@ public class User {
         this.badge8 = badge8;
     }
 
+    //Getters and setters
     @NonNull
     public String getUsername() {
         return username;

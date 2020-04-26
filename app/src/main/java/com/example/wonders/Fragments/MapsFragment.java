@@ -37,10 +37,12 @@ public class MapsFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
+            //Gets the specific wonder
             Intent intent = getActivity().getIntent();
             int position = intent.getIntExtra(ListOfWondersActivity.EXTRA_MESSAGE, 0);
             wonder = Wonder.getWonders().get(position);
 
+            //Creates longitude and latitude for each of the wonders
             LatLng wonderCood = new LatLng(wonder.getLatitude(), wonder.getLongitude());
             LatLng Taj_Mahal = new LatLng(27.173891, 78.042068);
             LatLng Colosseum = new LatLng(41.890251, 12.492373);
@@ -49,6 +51,8 @@ public class MapsFragment extends Fragment {
             LatLng Christ_the_Redeemer = new LatLng(-22.95158, -43.210482);
             LatLng Petra = new LatLng(30.328960, 35.444832);
             LatLng Great_Wall_of_China = new LatLng(40.431908, 116.570374);
+
+            //Sets the markers for each of the wonders and sets a colour for the marker
             googleMap.addMarker(new MarkerOptions().position(Taj_Mahal).title("Taj Mahal").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
             googleMap.addMarker(new MarkerOptions().position(Colosseum).title("Colosseum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
             googleMap.addMarker(new MarkerOptions().position(Chichen_Itza).title("Chichen Itza").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));

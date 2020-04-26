@@ -9,6 +9,7 @@ public class Wonder {
     private String location;
     private String year;
     private int image;
+    //Latitude and longitude for the wonders to use in maps
     private Double latitude;
     private Double longitude;
     private String desc;
@@ -16,9 +17,7 @@ public class Wonder {
     public Wonder() {
 
     }
-
     public Wonder(String name, String location, String year, int image, Double latitude, Double longitude, String desc) {
-
         this.name = name;
         this.location = location;
         this.year = year;
@@ -53,7 +52,6 @@ public class Wonder {
     public void setYear(String year) {
         this.year = year;
     }
-
 
     public int getImage() {
         return image;
