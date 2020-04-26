@@ -65,7 +65,8 @@ public class InformationFragment extends Fragment {
         imageView.setImageResource(wonder.getImage());
         String url = "text";
 
-        //Uses WikiAPI
+        //Uses WikiAPI for data
+        //Due to many other uses for Christ the Redeemer, we implemented an if-statement
         if (wonder.getName().equals("Christ the Redeemer")) {
             url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + wonder.getName() + "%20(statue)";
         } else {
@@ -74,6 +75,7 @@ public class InformationFragment extends Fragment {
         Context context = getContext();
         final RequestQueue requestQueue = Volley.newRequestQueue(context);
 
+        //
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -92,7 +94,7 @@ public class InformationFragment extends Fragment {
             }
         });
 
-// Add the request to the RequestQueue.
+        // Add the request to the RequestQueue.
         requestQueue.add(stringRequest);
 
         wiki.setOnClickListener(new View.OnClickListener() {

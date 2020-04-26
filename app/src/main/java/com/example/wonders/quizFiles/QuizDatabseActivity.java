@@ -106,7 +106,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent (QuizDatabseActivity.this, QuizTopics.class);
+                Intent intent = new Intent(QuizDatabseActivity.this, QuizTopics.class);
 
                 startActivity(intent);
 
@@ -182,7 +182,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
             score++; //increase score by 1
             correctCount++; //increases number of correct questions by 1
             currentScore.setVisibility(View.VISIBLE);
-            currentScore.setText(String.valueOf(score)+"/5");
+            currentScore.setText(String.valueOf(score) + "/5");
         }
 
 
@@ -231,7 +231,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
                 congratulations();
             } else {
 
-                if(correctCount<5){
+                if (correctCount < 5) {
                     gameOver();
                 } else {
                     finishQuiz();
@@ -264,8 +264,6 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
 
         });
-
-
 
 
     }
@@ -308,7 +306,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
     public void gameOver() {
         gameOverDialogue.setContentView(R.layout.quiz_popup_box);
         close = (ImageView) gameOverDialogue.findViewById(R.id.close);
-        tryAgain= (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
+        tryAgain = (Button) gameOverDialogue.findViewById(R.id.tryAgainBtn);
         badge = (ImageView) gameOverDialogue.findViewById(R.id.badge);
         exit = (Button) gameOverDialogue.findViewById(R.id.exitBtn);
         scorePopUp = (TextView) gameOverDialogue.findViewById(R.id.score);
@@ -324,7 +322,6 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
         gameOverDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         scorePopUp.setText("Your score is: " + correctCount);
-
 
 
         tryAgain.setOnClickListener(new View.OnClickListener() {
