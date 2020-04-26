@@ -3,6 +3,7 @@ package com.example.wonders;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -20,6 +21,7 @@ public class BadgesActivity extends AppCompatActivity {
     private ImageView maya;
     private ImageView rome;
     private ImageView finalBadge;
+    private ImageView backArrow;
     Animation animation;
 
 
@@ -36,6 +38,18 @@ public class BadgesActivity extends AppCompatActivity {
         maya = findViewById(R.id.badgeCard6Image);
         rome = findViewById(R.id.badgeCard7Image);
         finalBadge = findViewById(R.id.badgeCard8Image);
+        backArrow = findViewById(R.id.backArrow);
+
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BadgesActivity.this, MainActivity.class);
+
+                startActivity(intent);
+            }
+        });
+
+
 
         if(SessionData.currentUser.isBadge1()){
             china.setVisibility(View.VISIBLE);
