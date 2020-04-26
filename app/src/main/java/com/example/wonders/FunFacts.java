@@ -30,10 +30,13 @@ public class FunFacts extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+
+                Intent intent = new Intent (FunFacts.this, MainActivity.class);
+
+                startActivity(intent);
+
             }
         });
-
 
         setTitle("Fun Facts");
 

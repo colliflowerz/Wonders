@@ -44,7 +44,9 @@ public class BadgesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                finish();
+                Intent intent = new Intent (BadgesActivity.this, MainActivity.class);
+
+                startActivity(intent);
 
             }
         });
