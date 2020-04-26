@@ -3,6 +3,7 @@ package com.example.wonders.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -38,6 +39,9 @@ public class BadgesActivity extends AppCompatActivity {
 
         //Special easter egg if all 8 badges are collected
         theWonderer();
+
+        //Checks whether all 7 badges has been collected, if yes 8th badge will appear.
+        new CheckFinalBadge().execute();
 
         china = findViewById(R.id.badgeCard1Image);
         brazil = findViewById(R.id.badgeCard2Image);
@@ -109,16 +113,7 @@ public class BadgesActivity extends AppCompatActivity {
             mContainer.startDropping();
         }
 
-        //If all the badges are collected, you get rewarded with the final badge
-        if (SessionData.currentUser.isBadge1()
-                && SessionData.currentUser.isBadge2()
-                && SessionData.currentUser.isBadge3()
-                && SessionData.currentUser.isBadge4()
-                && SessionData.currentUser.isBadge5()
-                && SessionData.currentUser.isBadge6()
-                && SessionData.currentUser.isBadge7()) {
-            SessionData.currentUser.setBadge8(true);
-        }
+
     }
 
 
@@ -129,7 +124,7 @@ public class BadgesActivity extends AppCompatActivity {
     //Fun animation which rewards the student for completing all the quizzes
     //All the badges will be raining down across the screen
 
-    public void theWonderer(){
+    public void theWonderer() {
         mContainer = findViewById(R.id.group_emoji_container);
 
         // add emoji sources
@@ -153,6 +148,25 @@ public class BadgesActivity extends AppCompatActivity {
 
         // set drop frequency in milliseconds, default 500
         mContainer.setDropFrequency(500);
+    }
+
+
+    public class CheckFinalBadge extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            //If all the badges are collected, you get rewarded with the final badge
+            if (SessionData.currentUser.isBadge1()
+                    && SessionData.currentUser.isBadge2()
+                    && SessionData.currentUser.isBadge3()
+                    && SessionData.currentUser.isBadge4()
+                    && SessionData.currentUser.isBadge5()
+                    && SessionData.currentUser.isBadge6()
+                    && SessionData.currentUser.isBadge7()) {
+                SessionData.currentUser.setBadge8(true);
+            }
+            return null;
+        }
     }
 
 }
