@@ -53,42 +53,62 @@
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Collect all 7 badges from the Quizzes to earn The Wonderer"
+                    android:textAlignment="center"
+                    android:textColor="#dedede"
+                    android:textSize="18sp" />
+
                 <ImageView
+                    android:id="@+id/badge"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="#000000"
+                    android:src="@drawable/badge"
+                    android:tint="#000000" />
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
-                    android:src="@drawable/ic_healing_black_24dp" />
+                    android:text="Learn about the 7 Wonders of the World in the Explore tab"
+                    android:textAlignment="center"
+                    android:textColor="#dedede"
+                    android:textSize="18sp" />
 
-
-                <ScrollView
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Discover more with links to Youtube, Instagram and Google"
+                    android:textAlignment="center"
+                    android:textColor="#dedede"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/luckText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="Collect all 7 badges from the quizzes to get The Wonderer"
-                        android:textAlignment="center"
-                        android:textColor="#dedede"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_filter_vintage_black_24dp"/>
-
-                </ScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="And make notes while on your journey"
+                    android:textAlignment="center"
+                    android:textColor="#dedede"
+                    android:textSize="18sp" />
 
 
             </LinearLayout>

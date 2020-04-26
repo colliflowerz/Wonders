@@ -329,7 +329,7 @@ public class QuizDatabseActivity extends AppCompatActivity {
 
     }
 
-    //Updates the badge status if you pass the quiz. Through the user class and the database.
+    //Updates the badge status if you pass the quiz name in both the User class and the database.
     private void updateBadge(String name) {
         if (name.equals("The Great Wall of China")) {
             SessionData.currentUser.setBadge1(true);

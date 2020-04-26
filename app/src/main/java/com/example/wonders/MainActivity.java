@@ -1,8 +1,12 @@
 package com.example.wonders;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,13 +24,16 @@ public class MainActivity extends AppCompatActivity {
     private CardView notes;
     private CardView badges;
     private ScrollView bg1;
+    Dialog welcomeDialogue;
+    ImageView close, badge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setTitle("New Seven Wonders of the World");
+        //Open the welcome pop-up
+        openWelcomeDialog();
 
         //set bg
         bg1=findViewById(R.id.bg1);
@@ -103,6 +110,21 @@ public class MainActivity extends AppCompatActivity {
     private void LaunchListOfWonders(){
         Intent intent = new Intent(this, ListOfWonders.class);
         startActivity(intent);
+    }
+
+    private void openWelcomeDialog(){
+
+        welcomeDialogue = new Dialog(this);
+        welcomeDialogue.setContentView(R.layout.welcome_dialog);
+        close = (ImageView) welcomeDialogue.findViewById(R.id.close);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                welcomeDialogue.dismiss();
+            }
+        });
+        welcomeDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        welcomeDialogue.show();
     }
 
 
