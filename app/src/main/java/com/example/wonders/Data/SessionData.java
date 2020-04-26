@@ -17,12 +17,13 @@ public class SessionData {
 
     public static void createDB(Context context) {
 
+        //Builds user database
         mUserDatabase = Room.databaseBuilder(context.getApplicationContext(),
                 UserDatabase.class, "user_db").allowMainThreadQueries()
                 .fallbackToDestructiveMigration()
                 .build();
 
-
+        //Builds notees database
         mNotesDatabase = Room.databaseBuilder(context.getApplicationContext(),
                 NotesDatabase.class, "notes_db").allowMainThreadQueries()
                 .fallbackToDestructiveMigration()

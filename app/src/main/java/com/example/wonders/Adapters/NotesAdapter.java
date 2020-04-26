@@ -34,7 +34,6 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
             super(v);
             view = v;
             title = v.findViewById(R.id.cardTitle);
-
         }
     }
 
@@ -54,7 +53,6 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
     @Override
     public void onBindViewHolder(@NonNull NotesAdapter.NotesViewHolder holder, int position) {
         final Notes notesAtPosition = notesToAdapt.get(position);
-        //holder.nameTextView.setText(catsAtPosition.getName());
         holder.title.setText(notesAtPosition.getTitle());
 
         holder.view.setOnClickListener(new View.OnClickListener() {
@@ -64,8 +62,6 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
                 Intent intent = new Intent(context, NotesDetailActivity.class);
                 intent.putExtra("id", notesAtPosition.getId());
                 context.startActivity(intent);
-
-
             }
         });
     }

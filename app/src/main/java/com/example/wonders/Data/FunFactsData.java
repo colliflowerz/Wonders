@@ -2,10 +2,14 @@ package com.example.wonders.Data;
 
 import java.util.Random;
 
+// This code is derived from the fun facts app:
+// Source: https://github.com/treehouse/android-fun-facts-github/blob/master/app/src/main/java/com/teamtreehouse/funfacts/FactBook.java
+// Year: 2015
+// Author: Ben Deitch
+
 public class FunFactsData {
 
-
-    // this array stores all the facts that are in the "fun fact" functionality of the app
+    // This array stores all the facts that are in the "fun fact" functionality of the app
     String[] factsList = {
             "Many of the sites in Chichen Itza are known for their unusual sounds. If you clap once from one end of the Ball Court, it produces nine echoes in the middle of the court!",
             "The term Chichen Itza means ‘the mouth at the well of Itza’.",
@@ -22,7 +26,7 @@ public class FunFactsData {
             "Due to Christ the Redeemer’s mountaintop position, it’s prone to lightning strikes and gets hit around three to six times a year.",
             "The original design of Christ the Redeemer was different to what we see today. It was intended for Christ to be holding a globe in one hand and a cross in the other, rather than two open arms."};
 
-    //getter to retrieve these facts
+    //Getter to retrieve these facts
     public String getFact() {
         String fact = "";
 
@@ -35,4 +39,4 @@ public class FunFactsData {
     }
 }
 
-//reference: this code is derived from the fun facts app: https://github.com/treehouse/android-fun-facts-github/blob/master/app/src/main/java/com/teamtreehouse/funfacts/FactBook.java
+

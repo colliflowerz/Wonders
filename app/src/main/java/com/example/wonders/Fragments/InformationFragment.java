@@ -57,7 +57,6 @@ public class InformationFragment extends Fragment {
         description = view.findViewById(R.id.wonder_description);
         wiki = view.findViewById(R.id.wiki_link);
 
-
         Intent intent = getActivity().getIntent();
         int position = intent.getIntExtra(ListOfWondersActivity.EXTRA_MESSAGE, 0);
         wonder = Wonder.getWonders().get(position);
@@ -65,11 +64,12 @@ public class InformationFragment extends Fragment {
         title.setText(wonder.getName());
         imageView.setImageResource(wonder.getImage());
         String url = "text";
-        //using wiki this time but may want to use worldatlas.com
-        if (wonder.getName().equals("Christ the Redeemer")){
+
+        //Uses WikiAPI
+        if (wonder.getName().equals("Christ the Redeemer")) {
             url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + wonder.getName() + "%20(statue)";
         } else {
-              url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + wonder.getName();
+            url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + wonder.getName();
         }
         Context context = getContext();
         final RequestQueue requestQueue = Volley.newRequestQueue(context);
@@ -78,7 +78,7 @@ public class InformationFragment extends Fragment {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        String string = (response.substring(response.lastIndexOf("extract")+10,response.length()-5));
+                        String string = (response.substring(response.lastIndexOf("extract") + 10, response.length() - 5));
                         string = string.replace("\\n", "\n\n");
                         string = string.replaceAll("\\(.*?\\)", "");
                         // Display
@@ -99,18 +99,17 @@ public class InformationFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if (wonder.getName().equals("Christ the Redeemer")){
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/"+wonder.getName()+"%20(statue)"));
+                if (wonder.getName().equals("Christ the Redeemer")) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/" + wonder.getName() + "%20(statue)"));
                     startActivity(browserIntent);
 
+                } else {
+
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/" + wonder.getName()));
+                    startActivity(browserIntent);
                 }
-
-                else{
-
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/"+wonder.getName()));
-                startActivity(browserIntent);
             }
-        }});
+        });
 
         return view;
     }

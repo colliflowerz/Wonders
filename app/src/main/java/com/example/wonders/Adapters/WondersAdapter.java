@@ -28,7 +28,6 @@ public class WondersAdapter extends RecyclerView.Adapter<WondersAdapter.WondersV
 
     }
 
-
     public static class WondersViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView name, year, location;
         private ImageView image;

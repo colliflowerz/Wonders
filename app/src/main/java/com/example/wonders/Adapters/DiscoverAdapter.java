@@ -51,10 +51,7 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
             youtube.setTag(this);
             google = v.findViewById(R.id.google);
             google.setTag(this);
-
             desc = v.findViewById(R.id.desc);
-
-
         }
 
         public void onClick(View v) {
@@ -111,13 +108,11 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.Discov
 
     }
 
-
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return mWonders.size();
     }
-
 
 }
 
