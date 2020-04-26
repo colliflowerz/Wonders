@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textLandingBadges"
                 android:layout_marginTop="4dp"
-                android:text="Collect all 7 badges to get The Wonderer"
+                android:text="Conquer all 7 Wonders to become the Wonderer"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 
